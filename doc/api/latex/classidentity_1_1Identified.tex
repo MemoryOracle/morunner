@@ -1,0 +1,161 @@
+\hypertarget{classidentity_1_1Identified}{}\section{identity.\+Identified Class Reference}
+\label{classidentity_1_1Identified}\index{identity.\+Identified@{identity.\+Identified}}
+
+
+Inheritance diagram for identity.\+Identified\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classidentity_1_1Identified__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for identity.\+Identified\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=171pt]{classidentity_1_1Identified__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classidentity_1_1Identified_a987257f443806b78329b8b21527c6771}{\+\_\+\+\_\+init\+\_\+\+\_\+}
+\item 
+def \hyperlink{classidentity_1_1Identified_a3ebcf9afe0cee077defbf193763500d7}{\+\_\+\+\_\+hash\+\_\+\+\_\+} (self)
+\item 
+def \hyperlink{classidentity_1_1Identified_a26f84d80164bfc0428b75a3710fc2314}{\+\_\+\+\_\+eq\+\_\+\+\_\+}
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classidentity_1_1Identified_a66c7fac21a97889bb0584a69cd6dd4e2}{\+\_\+\+\_\+identity}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}Identified is a base class for other identity classes in this module.  You
+can directly use it to define other identity classes if you like, but try
+not to rely on its internal mechanics, as these are far from final.
+
+The goal of this  is to prevent the user from even needing to consider
+the means by which the identity is assigned, the member variable to which
+it is assigned, or anything about it.  Please do not attempt to even access
+the identity value.  Just use the hash function if you truly need a unique
+id number for your object, as the identity implementation could (in theory)
+change in incompatible ways.
+\end{DoxyVerb}
+ 
+
+Definition at line 14 of file identity.\+py.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classidentity_1_1Identified_a987257f443806b78329b8b21527c6771}{}\index{identity\+::\+Identified@{identity\+::\+Identified}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!identity\+::\+Identified@{identity\+::\+Identified}}
+\subsubsection[{\+\_\+\+\_\+init\+\_\+\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}def identity.\+Identified.\+\_\+\+\_\+init\+\_\+\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{identity\+\_\+function}
+\end{DoxyParamCaption}
+)}\label{classidentity_1_1Identified_a987257f443806b78329b8b21527c6771}
+
+
+Definition at line 29 of file identity.\+py.
+
+
+\begin{DoxyCode}
+29                  identity\_function: typing.Callable[[], typing.Hashable[object]]
+30                 ) -> \textcolor{keywordtype}{None}:
+31         \textcolor{stringliteral}{"""}
+32 \textcolor{stringliteral}{        Invoke identity\_function to construct the identity of this instance.}
+33 \textcolor{stringliteral}{}
+34 \textcolor{stringliteral}{        @param identity\_function a nullary function used to assign an identity}
+35 \textcolor{stringliteral}{        to this instance.}
+36 \textcolor{stringliteral}{        """}
+37         self.\hyperlink{classidentity_1_1Identified_a66c7fac21a97889bb0584a69cd6dd4e2}{\_\_identity} = hash(identity\_function())
+38 
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classidentity_1_1Identified_a26f84d80164bfc0428b75a3710fc2314}{}\index{identity\+::\+Identified@{identity\+::\+Identified}!\+\_\+\+\_\+eq\+\_\+\+\_\+@{\+\_\+\+\_\+eq\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+eq\+\_\+\+\_\+@{\+\_\+\+\_\+eq\+\_\+\+\_\+}!identity\+::\+Identified@{identity\+::\+Identified}}
+\subsubsection[{\+\_\+\+\_\+eq\+\_\+\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}def identity.\+Identified.\+\_\+\+\_\+eq\+\_\+\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{rhs}
+\end{DoxyParamCaption}
+)}\label{classidentity_1_1Identified_a26f84d80164bfc0428b75a3710fc2314}
+
+
+Definition at line 48 of file identity.\+py.
+
+
+\begin{DoxyCode}
+48     \textcolor{keyword}{def }\hyperlink{classidentity_1_1Identified_a26f84d80164bfc0428b75a3710fc2314}{\_\_eq\_\_}(self, rhs: \textcolor{stringliteral}{'Identified'}) -> bool:
+49         \textcolor{stringliteral}{"""}
+50 \textcolor{stringliteral}{        Equivalence check between two Identified objects.}
+51 \textcolor{stringliteral}{}
+52 \textcolor{stringliteral}{        @return <bool> The equivalence of self and rhs.}
+53 \textcolor{stringliteral}{        """}
+54         \textcolor{keywordflow}{return} isinstance(rhs, Identified) \textcolor{keywordflow}{and} (hash(self) == hash(rhs))
+55 
+56 
+57 
+\end{DoxyCode}
+\hypertarget{classidentity_1_1Identified_a3ebcf9afe0cee077defbf193763500d7}{}\index{identity\+::\+Identified@{identity\+::\+Identified}!\+\_\+\+\_\+hash\+\_\+\+\_\+@{\+\_\+\+\_\+hash\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+hash\+\_\+\+\_\+@{\+\_\+\+\_\+hash\+\_\+\+\_\+}!identity\+::\+Identified@{identity\+::\+Identified}}
+\subsubsection[{\+\_\+\+\_\+hash\+\_\+\+\_\+(self)}]{\setlength{\rightskip}{0pt plus 5cm}def identity.\+Identified.\+\_\+\+\_\+hash\+\_\+\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{int}
+\end{DoxyParamCaption}
+)}\label{classidentity_1_1Identified_a3ebcf9afe0cee077defbf193763500d7}
+\begin{DoxyVerb}Return a hash which is *only* a function of the identity assigned at
+__init__.
+
+@return <int> The hash of the value returned by identity_function() at init.
+\end{DoxyVerb}
+ 
+
+Definition at line 39 of file identity.\+py.
+
+
+
+References identity.\+Identified.\+\_\+\+\_\+identity.
+
+
+\begin{DoxyCode}
+39     \textcolor{keyword}{def }\hyperlink{classidentity_1_1Identified_a3ebcf9afe0cee077defbf193763500d7}{\_\_hash\_\_}(self) -> int:
+40         \textcolor{stringliteral}{"""}
+41 \textcolor{stringliteral}{        Return a hash which is *only* a function of the identity assigned at}
+42 \textcolor{stringliteral}{        \_\_init\_\_.}
+43 \textcolor{stringliteral}{}
+44 \textcolor{stringliteral}{        @return <int> The hash of the value returned by identity\_function() at init.}
+45 \textcolor{stringliteral}{        """}
+46         \textcolor{keywordflow}{return} self.\hyperlink{classidentity_1_1Identified_a66c7fac21a97889bb0584a69cd6dd4e2}{\_\_identity}
+47 
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classidentity_1_1Identified_a66c7fac21a97889bb0584a69cd6dd4e2}{}\index{identity\+::\+Identified@{identity\+::\+Identified}!\+\_\+\+\_\+identity@{\+\_\+\+\_\+identity}}
+\index{\+\_\+\+\_\+identity@{\+\_\+\+\_\+identity}!identity\+::\+Identified@{identity\+::\+Identified}}
+\subsubsection[{\+\_\+\+\_\+identity}]{\setlength{\rightskip}{0pt plus 5cm}identity.\+Identified.\+\_\+\+\_\+identity\hspace{0.3cm}{\ttfamily [private]}}\label{classidentity_1_1Identified_a66c7fac21a97889bb0584a69cd6dd4e2}
+
+
+Definition at line 37 of file identity.\+py.
+
+
+
+Referenced by identity.\+Identified.\+\_\+\+\_\+hash\+\_\+\+\_\+().
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/runner/\hyperlink{identity_8py}{identity.\+py}\end{DoxyCompactItemize}

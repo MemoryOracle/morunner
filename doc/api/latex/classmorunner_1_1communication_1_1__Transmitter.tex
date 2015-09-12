@@ -1,0 +1,148 @@
+\hypertarget{classmorunner_1_1communication_1_1__Transmitter}{}\section{morunner.\+communication.\+\_\+\+Transmitter Class Reference}
+\label{classmorunner_1_1communication_1_1__Transmitter}\index{morunner.\+communication.\+\_\+\+Transmitter@{morunner.\+communication.\+\_\+\+Transmitter}}
+
+
+Inheritance diagram for morunner.\+communication.\+\_\+\+Transmitter\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmorunner_1_1communication_1_1__Transmitter__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for morunner.\+communication.\+\_\+\+Transmitter\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{classmorunner_1_1communication_1_1__Transmitter__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classmorunner_1_1communication_1_1__Transmitter_ada6f89d3536ac6aeb6fe09fb3f5ac46e}{\+\_\+\+\_\+init\+\_\+\+\_\+} (self)
+\item 
+def \hyperlink{classmorunner_1_1communication_1_1__Transmitter_ad4e197abeee1bb81d41f57282ffb29c0}{connect}
+\item 
+def \hyperlink{classmorunner_1_1communication_1_1__Transmitter_a054317d3dbeecd42d6bbb81612d67ea5}{connection} (self)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classmorunner_1_1communication_1_1__Transmitter_a759fb3f16daa3686e84a775f6cb8e60d}{\+\_\+connection}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 127 of file communication.\+py.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classmorunner_1_1communication_1_1__Transmitter_ada6f89d3536ac6aeb6fe09fb3f5ac46e}{}\index{morunner\+::communication\+::\+\_\+\+Transmitter@{morunner\+::communication\+::\+\_\+\+Transmitter}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!morunner\+::communication\+::\+\_\+\+Transmitter@{morunner\+::communication\+::\+\_\+\+Transmitter}}
+\subsubsection[{\+\_\+\+\_\+init\+\_\+\+\_\+(self)}]{\setlength{\rightskip}{0pt plus 5cm}def morunner.\+communication.\+\_\+\+Transmitter.\+\_\+\+\_\+init\+\_\+\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{None}
+\end{DoxyParamCaption}
+)}\label{classmorunner_1_1communication_1_1__Transmitter_ada6f89d3536ac6aeb6fe09fb3f5ac46e}
+
+
+Definition at line 129 of file communication.\+py.
+
+
+\begin{DoxyCode}
+129     \textcolor{keyword}{def }\hyperlink{classmorunner_1_1communication_1_1__Transmitter_ada6f89d3536ac6aeb6fe09fb3f5ac46e}{\_\_init\_\_}(self) -> None:
+130         super().\hyperlink{classmorunner_1_1communication_1_1__Transmitter_ada6f89d3536ac6aeb6fe09fb3f5ac46e}{\_\_init\_\_}()
+131         self.\hyperlink{classmorunner_1_1communication_1_1__Transmitter_a759fb3f16daa3686e84a775f6cb8e60d}{\_connection} = \textcolor{keywordtype}{None}
+132 
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classmorunner_1_1communication_1_1__Transmitter_ad4e197abeee1bb81d41f57282ffb29c0}{}\index{morunner\+::communication\+::\+\_\+\+Transmitter@{morunner\+::communication\+::\+\_\+\+Transmitter}!connect@{connect}}
+\index{connect@{connect}!morunner\+::communication\+::\+\_\+\+Transmitter@{morunner\+::communication\+::\+\_\+\+Transmitter}}
+\subsubsection[{connect}]{\setlength{\rightskip}{0pt plus 5cm}def morunner.\+communication.\+\_\+\+Transmitter.\+connect (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{connection}
+\end{DoxyParamCaption}
+)}\label{classmorunner_1_1communication_1_1__Transmitter_ad4e197abeee1bb81d41f57282ffb29c0}
+
+
+Definition at line 134 of file communication.\+py.
+
+
+
+References morunner.\+communication.\+\_\+\+Transmitter.\+\_\+connection.
+
+
+\begin{DoxyCode}
+134                 connection: multiprocessing.connection.Connection
+135                ) -> \textcolor{keywordtype}{None}:
+136         self.\hyperlink{classmorunner_1_1communication_1_1__Transmitter_a759fb3f16daa3686e84a775f6cb8e60d}{\_connection} = connection
+137 
+\end{DoxyCode}
+\hypertarget{classmorunner_1_1communication_1_1__Transmitter_a054317d3dbeecd42d6bbb81612d67ea5}{}\index{morunner\+::communication\+::\+\_\+\+Transmitter@{morunner\+::communication\+::\+\_\+\+Transmitter}!connection@{connection}}
+\index{connection@{connection}!morunner\+::communication\+::\+\_\+\+Transmitter@{morunner\+::communication\+::\+\_\+\+Transmitter}}
+\subsubsection[{connection(self)}]{\setlength{\rightskip}{0pt plus 5cm}def morunner.\+communication.\+\_\+\+Transmitter.\+connection (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classmorunner_1_1communication_1_1__Transmitter_a054317d3dbeecd42d6bbb81612d67ea5}
+
+
+Definition at line 139 of file communication.\+py.
+
+
+
+References morunner.\+communication.\+\_\+\+Transmitter.\+\_\+connection.
+
+
+
+Referenced by morunner.\+communication.\+Subscriber.\+listen(), and morunner.\+communication.\+Publisher.\+produce().
+
+
+\begin{DoxyCode}
+139     \textcolor{keyword}{def }\hyperlink{classmorunner_1_1communication_1_1__Transmitter_a054317d3dbeecd42d6bbb81612d67ea5}{connection}(self):
+140         \textcolor{keywordflow}{return} self.\hyperlink{classmorunner_1_1communication_1_1__Transmitter_a759fb3f16daa3686e84a775f6cb8e60d}{\_connection}
+141 
+142 
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmorunner_1_1communication_1_1__Transmitter_a054317d3dbeecd42d6bbb81612d67ea5_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classmorunner_1_1communication_1_1__Transmitter_a759fb3f16daa3686e84a775f6cb8e60d}{}\index{morunner\+::communication\+::\+\_\+\+Transmitter@{morunner\+::communication\+::\+\_\+\+Transmitter}!\+\_\+connection@{\+\_\+connection}}
+\index{\+\_\+connection@{\+\_\+connection}!morunner\+::communication\+::\+\_\+\+Transmitter@{morunner\+::communication\+::\+\_\+\+Transmitter}}
+\subsubsection[{\+\_\+connection}]{\setlength{\rightskip}{0pt plus 5cm}morunner.\+communication.\+\_\+\+Transmitter.\+\_\+connection\hspace{0.3cm}{\ttfamily [private]}}\label{classmorunner_1_1communication_1_1__Transmitter_a759fb3f16daa3686e84a775f6cb8e60d}
+
+
+Definition at line 131 of file communication.\+py.
+
+
+
+Referenced by morunner.\+communication.\+\_\+\+Transmitter.\+connect(), and morunner.\+communication.\+\_\+\+Transmitter.\+connection().
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/morunner/\hyperlink{communication_8py}{communication.\+py}\end{DoxyCompactItemize}

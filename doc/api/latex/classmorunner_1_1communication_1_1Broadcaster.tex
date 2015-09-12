@@ -1,0 +1,324 @@
+\hypertarget{classmorunner_1_1communication_1_1Broadcaster}{}\section{morunner.\+communication.\+Broadcaster Class Reference}
+\label{classmorunner_1_1communication_1_1Broadcaster}\index{morunner.\+communication.\+Broadcaster@{morunner.\+communication.\+Broadcaster}}
+
+
+Inheritance diagram for morunner.\+communication.\+Broadcaster\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=262pt]{classmorunner_1_1communication_1_1Broadcaster__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for morunner.\+communication.\+Broadcaster\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=262pt]{classmorunner_1_1communication_1_1Broadcaster__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classmorunner_1_1communication_1_1Broadcaster_a353666919bb263e6108f2a0d77af88ed}{\+\_\+\+\_\+init\+\_\+\+\_\+} (self)
+\item 
+def \hyperlink{classmorunner_1_1communication_1_1Broadcaster_afe50efe55386fc0789f39288e8a22df3}{add\+\_\+publisher}
+\item 
+def \hyperlink{classmorunner_1_1communication_1_1Broadcaster_a5d151aa725b579b60939538251174ea1}{add\+\_\+subscriber}
+\item 
+def \hyperlink{classmorunner_1_1communication_1_1Broadcaster_af64ec7e4523b999b3bc0b8ad2b4a3f69}{collect} (self)
+\item 
+def \hyperlink{classmorunner_1_1communication_1_1Broadcaster_afb1b1e572d11b20ed3741128b57fbf6b}{broadcast} (self)
+\item 
+def \hyperlink{classmorunner_1_1communication_1_1Broadcaster_a61ad6f950dae096410b3703ca4aa05f9}{run} (self)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classmorunner_1_1communication_1_1Broadcaster_a7d493d4d4af6ae6ace1e22f38e32c6c0}{\+\_\+publishers}
+\item 
+\hyperlink{classmorunner_1_1communication_1_1Broadcaster_acc9ff1f0cf6bb65e494d8cacf497886f}{\+\_\+subscribers}
+\item 
+\hyperlink{classmorunner_1_1communication_1_1Broadcaster_a5c47bd16e024f775a6a690e7127a7151}{\+\_\+holding}
+\item 
+\hyperlink{classmorunner_1_1communication_1_1Broadcaster_aef0a924920a790ba2380db4d2b93e210}{\+\_\+listener}
+\item 
+\hyperlink{classmorunner_1_1communication_1_1Broadcaster_a97538f8b7d411305f21fa5e5f475fbf8}{\+\_\+announcer}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 174 of file communication.\+py.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classmorunner_1_1communication_1_1Broadcaster_a353666919bb263e6108f2a0d77af88ed}{}\index{morunner\+::communication\+::\+Broadcaster@{morunner\+::communication\+::\+Broadcaster}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!morunner\+::communication\+::\+Broadcaster@{morunner\+::communication\+::\+Broadcaster}}
+\subsubsection[{\+\_\+\+\_\+init\+\_\+\+\_\+(self)}]{\setlength{\rightskip}{0pt plus 5cm}def morunner.\+communication.\+Broadcaster.\+\_\+\+\_\+init\+\_\+\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{None}
+\end{DoxyParamCaption}
+)}\label{classmorunner_1_1communication_1_1Broadcaster_a353666919bb263e6108f2a0d77af88ed}
+
+
+Definition at line 176 of file communication.\+py.
+
+
+\begin{DoxyCode}
+176     \textcolor{keyword}{def }\hyperlink{classmorunner_1_1communication_1_1Broadcaster_a353666919bb263e6108f2a0d77af88ed}{\_\_init\_\_}(self) -> None:
+177         super().\hyperlink{classmorunner_1_1communication_1_1Broadcaster_a353666919bb263e6108f2a0d77af88ed}{\_\_init\_\_}()
+178         self.\hyperlink{classmorunner_1_1communication_1_1Broadcaster_a7d493d4d4af6ae6ace1e22f38e32c6c0}{\_publishers} = dict() \textcolor{comment}{# type: Dict[Publisher, multiprocessing.connection.Connection]}
+179         self.\hyperlink{classmorunner_1_1communication_1_1Broadcaster_acc9ff1f0cf6bb65e494d8cacf497886f}{\_subscribers} = dict() \textcolor{comment}{# type: Dict[Subscriber,
+       multiprocessing.connection.Connection]}
+180         \textcolor{comment}{# queue of messages which have been accepted but not yet transmitted}
+181         self.\hyperlink{classmorunner_1_1communication_1_1Broadcaster_a5c47bd16e024f775a6a690e7127a7151}{\_holding} = queue.Queue()
+182 
+183         \textcolor{comment}{# self.\_listener is responsible for collecting (and placing in}
+184         \textcolor{comment}{# self.\_holding) all the publisher messages}
+185         self.\hyperlink{classmorunner_1_1communication_1_1Broadcaster_aef0a924920a790ba2380db4d2b93e210}{\_listener} = threading.Thread(target=Broadcaster.collect, args=(self,))
+186 
+187         \textcolor{comment}{# self.\_announcer is responsible for distributing all messasges from}
+188         \textcolor{comment}{# self.\_holding to the *interested* subscribers}
+189         self.\hyperlink{classmorunner_1_1communication_1_1Broadcaster_a97538f8b7d411305f21fa5e5f475fbf8}{\_announcer} = threading.Thread(target=Broadcaster.broadcast, args=(self,))
+190 
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classmorunner_1_1communication_1_1Broadcaster_afe50efe55386fc0789f39288e8a22df3}{}\index{morunner\+::communication\+::\+Broadcaster@{morunner\+::communication\+::\+Broadcaster}!add\+\_\+publisher@{add\+\_\+publisher}}
+\index{add\+\_\+publisher@{add\+\_\+publisher}!morunner\+::communication\+::\+Broadcaster@{morunner\+::communication\+::\+Broadcaster}}
+\subsubsection[{add\+\_\+publisher}]{\setlength{\rightskip}{0pt plus 5cm}def morunner.\+communication.\+Broadcaster.\+add\+\_\+publisher (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{publisher}
+\end{DoxyParamCaption}
+)}\label{classmorunner_1_1communication_1_1Broadcaster_afe50efe55386fc0789f39288e8a22df3}
+
+
+Definition at line 191 of file communication.\+py.
+
+
+
+References morunner.\+communication.\+Broadcaster.\+\_\+publishers.
+
+
+\begin{DoxyCode}
+191     \textcolor{keyword}{def }\hyperlink{classmorunner_1_1communication_1_1Broadcaster_afe50efe55386fc0789f39288e8a22df3}{add\_publisher}(self, publisher: Publisher) -> multiprocessing.connection.Connection:
+192         \textcolor{stringliteral}{"""}
+193 \textcolor{stringliteral}{        Add a Publisher to send messages to this Broadcaster.}
+194 \textcolor{stringliteral}{        """}
+195         \textcolor{keywordflow}{if} publisher \textcolor{keywordflow}{in} self.\hyperlink{classmorunner_1_1communication_1_1Broadcaster_a7d493d4d4af6ae6ace1e22f38e32c6c0}{\_publishers}:
+196             \textcolor{keywordflow}{raise} ValueError(\textcolor{stringliteral}{"Already have that publisher"})
+197         recv, send = multiprocessing.Pipe(duplex=\textcolor{keyword}{False})
+198         self.\hyperlink{classmorunner_1_1communication_1_1Broadcaster_a7d493d4d4af6ae6ace1e22f38e32c6c0}{\_publishers}[publisher] = recv
+199         \textcolor{keywordflow}{return} send
+200 
+\end{DoxyCode}
+\hypertarget{classmorunner_1_1communication_1_1Broadcaster_a5d151aa725b579b60939538251174ea1}{}\index{morunner\+::communication\+::\+Broadcaster@{morunner\+::communication\+::\+Broadcaster}!add\+\_\+subscriber@{add\+\_\+subscriber}}
+\index{add\+\_\+subscriber@{add\+\_\+subscriber}!morunner\+::communication\+::\+Broadcaster@{morunner\+::communication\+::\+Broadcaster}}
+\subsubsection[{add\+\_\+subscriber}]{\setlength{\rightskip}{0pt plus 5cm}def morunner.\+communication.\+Broadcaster.\+add\+\_\+subscriber (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{subscriber}
+\end{DoxyParamCaption}
+)}\label{classmorunner_1_1communication_1_1Broadcaster_a5d151aa725b579b60939538251174ea1}
+
+
+Definition at line 201 of file communication.\+py.
+
+
+
+References morunner.\+communication.\+Broadcaster.\+\_\+subscribers.
+
+
+\begin{DoxyCode}
+201     \textcolor{keyword}{def }\hyperlink{classmorunner_1_1communication_1_1Broadcaster_a5d151aa725b579b60939538251174ea1}{add\_subscriber}(self, subscriber: Subscriber) -> multiprocessing.connection.Connection
+      :
+202         \textcolor{stringliteral}{"""}
+203 \textcolor{stringliteral}{        Add a Subscriber to recieve messages from this Broadcaster.}
+204 \textcolor{stringliteral}{        """}
+205         \textcolor{keywordflow}{if} subscriber \textcolor{keywordflow}{in} self.\hyperlink{classmorunner_1_1communication_1_1Broadcaster_acc9ff1f0cf6bb65e494d8cacf497886f}{\_subscribers}:
+206             \textcolor{keywordflow}{raise} ValueError(\textcolor{stringliteral}{"Already have that subscriber"})
+207         recv, send = multiprocessing.Pipe(duplex=\textcolor{keyword}{False})
+208         self.\hyperlink{classmorunner_1_1communication_1_1Broadcaster_acc9ff1f0cf6bb65e494d8cacf497886f}{\_subscribers}[subscriber] = send
+209         \textcolor{keywordflow}{return} recv
+210 
+\end{DoxyCode}
+\hypertarget{classmorunner_1_1communication_1_1Broadcaster_afb1b1e572d11b20ed3741128b57fbf6b}{}\index{morunner\+::communication\+::\+Broadcaster@{morunner\+::communication\+::\+Broadcaster}!broadcast@{broadcast}}
+\index{broadcast@{broadcast}!morunner\+::communication\+::\+Broadcaster@{morunner\+::communication\+::\+Broadcaster}}
+\subsubsection[{broadcast(self)}]{\setlength{\rightskip}{0pt plus 5cm}def morunner.\+communication.\+Broadcaster.\+broadcast (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classmorunner_1_1communication_1_1Broadcaster_afb1b1e572d11b20ed3741128b57fbf6b}
+
+
+Definition at line 221 of file communication.\+py.
+
+
+\begin{DoxyCode}
+221     \textcolor{keyword}{def }\hyperlink{classmorunner_1_1communication_1_1Broadcaster_afb1b1e572d11b20ed3741128b57fbf6b}{broadcast}(self):
+222         \textcolor{keywordflow}{while} \textcolor{keyword}{True}:
+223             msg = self.\_holding.get()
+224             outbound = list(self.\_subscribers.values())
+225             \textcolor{keywordflow}{for} s \textcolor{keywordflow}{in} outbound:
+226                 s.send\_bytes(msg)
+227             self.\_holding.task\_done()
+228 
+\end{DoxyCode}
+\hypertarget{classmorunner_1_1communication_1_1Broadcaster_af64ec7e4523b999b3bc0b8ad2b4a3f69}{}\index{morunner\+::communication\+::\+Broadcaster@{morunner\+::communication\+::\+Broadcaster}!collect@{collect}}
+\index{collect@{collect}!morunner\+::communication\+::\+Broadcaster@{morunner\+::communication\+::\+Broadcaster}}
+\subsubsection[{collect(self)}]{\setlength{\rightskip}{0pt plus 5cm}def morunner.\+communication.\+Broadcaster.\+collect (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classmorunner_1_1communication_1_1Broadcaster_af64ec7e4523b999b3bc0b8ad2b4a3f69}
+
+
+Definition at line 211 of file communication.\+py.
+
+
+\begin{DoxyCode}
+211     \textcolor{keyword}{def }\hyperlink{classmorunner_1_1communication_1_1Broadcaster_af64ec7e4523b999b3bc0b8ad2b4a3f69}{collect}(self):
+212         \textcolor{keywordflow}{while} \textcolor{keyword}{True}:
+213             inbound = list(self.\_publishers.values())
+214             \textcolor{keywordflow}{for} p \textcolor{keywordflow}{in} multiprocessing.connection.wait(inbound):
+215                 \textcolor{keywordflow}{try}:
+216                     msg = p.recv\_bytes()
+217                     self.\_holding.put(msg)
+218                 \textcolor{keywordflow}{except} EOFError:
+219                     inbound.remove(p)
+220 
+\end{DoxyCode}
+\hypertarget{classmorunner_1_1communication_1_1Broadcaster_a61ad6f950dae096410b3703ca4aa05f9}{}\index{morunner\+::communication\+::\+Broadcaster@{morunner\+::communication\+::\+Broadcaster}!run@{run}}
+\index{run@{run}!morunner\+::communication\+::\+Broadcaster@{morunner\+::communication\+::\+Broadcaster}}
+\subsubsection[{run(self)}]{\setlength{\rightskip}{0pt plus 5cm}def morunner.\+communication.\+Broadcaster.\+run (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{None}
+\end{DoxyParamCaption}
+)}\label{classmorunner_1_1communication_1_1Broadcaster_a61ad6f950dae096410b3703ca4aa05f9}
+
+
+Definition at line 229 of file communication.\+py.
+
+
+\begin{DoxyCode}
+229     \textcolor{keyword}{def }\hyperlink{classmorunner_1_1communication_1_1Broadcaster_a61ad6f950dae096410b3703ca4aa05f9}{run}(self) -> None:
+230         self.\_listener.start()
+231         self.\_announcer.start()
+232 
+233 
+234 \textcolor{comment}{# generated = 0}
+235 \textcolor{comment}{# initial = time.clock()}
+236 \textcolor{comment}{# quantity = 50000}
+237 
+238 \textcolor{comment}{# def generate(pub):}
+239 \textcolor{comment}{#     global generated}
+240 \textcolor{comment}{#     global initial}
+241 \textcolor{comment}{#     global quantity}
+242 \textcolor{comment}{#     global test\_size}
+243 \textcolor{comment}{#     for i in range(quantity):}
+244 \textcolor{comment}{#         pub.produce(message=None)}
+245 \textcolor{comment}{#         generated += 1}
+246 \textcolor{comment}{#         if (generated % 1000) == 0:}
+247 \textcolor{comment}{#             print("Rate: ", test\_size * generated / (time.clock() - initial))}
+248 \textcolor{comment}{#     return "All done generating"}
+249 
+250 \textcolor{comment}{# def consume(sub):}
+251 \textcolor{comment}{#     global quantity}
+252 \textcolor{comment}{#     for i in range(quantity):}
+253 \textcolor{comment}{#         sub.recieve()}
+254 \textcolor{comment}{#     return "All done consuming"}
+255 
+256 \textcolor{comment}{# def publisher\_factory(broadcaster):}
+257 \textcolor{comment}{#     pub = Publisher()}
+258 \textcolor{comment}{#     pub\_con = broadcaster.add\_publisher(pub)}
+259 \textcolor{comment}{#     pub.connect(pub\_con)}
+260 \textcolor{comment}{#     return pub}
+261 
+262 \textcolor{comment}{# def subscriber\_factory(broadcaster):}
+263 \textcolor{comment}{#     sub = Subscriber()}
+264 \textcolor{comment}{#     sub\_con = broadcaster.add\_subscriber(sub)}
+265 \textcolor{comment}{#     sub.connect(sub\_con)}
+266 \textcolor{comment}{#     return sub}
+267 
+268 \textcolor{comment}{# def done(whatever):}
+269 \textcolor{comment}{#     print("All done")}
+270 
+271 \textcolor{comment}{# def main():}
+272 
+273 \textcolor{comment}{#     broadcaster = Broadcaster()}
+274 \textcolor{comment}{#     publishers = [publisher\_factory(broadcaster) for i in range(2)]}
+275 \textcolor{comment}{#     subscribers = [subscriber\_factory(broadcaster) for i in range(3)]}
+276 \textcolor{comment}{#     with multiprocessing.Pool() as pool:}
+277 \textcolor{comment}{#         # async\_results = []}
+278 \textcolor{comment}{#         gasy = pool.map\_async(generate, publishers, callback=done)}
+279 \textcolor{comment}{#         casy = pool.map\_async(consume, subscribers, callback=done)}
+280 \textcolor{comment}{#         broadcaster.run()}
+281 \textcolor{comment}{#         pool.close()}
+282 \textcolor{comment}{#         pool.join()}
+283 \textcolor{comment}{#     print("over")}
+284 
+285 
+286 \textcolor{comment}{# if \_\_name\_\_ == "\_\_main\_\_":}
+287 \textcolor{comment}{#     main()}
+288 \end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classmorunner_1_1communication_1_1Broadcaster_a97538f8b7d411305f21fa5e5f475fbf8}{}\index{morunner\+::communication\+::\+Broadcaster@{morunner\+::communication\+::\+Broadcaster}!\+\_\+announcer@{\+\_\+announcer}}
+\index{\+\_\+announcer@{\+\_\+announcer}!morunner\+::communication\+::\+Broadcaster@{morunner\+::communication\+::\+Broadcaster}}
+\subsubsection[{\+\_\+announcer}]{\setlength{\rightskip}{0pt plus 5cm}morunner.\+communication.\+Broadcaster.\+\_\+announcer\hspace{0.3cm}{\ttfamily [private]}}\label{classmorunner_1_1communication_1_1Broadcaster_a97538f8b7d411305f21fa5e5f475fbf8}
+
+
+Definition at line 189 of file communication.\+py.
+
+\hypertarget{classmorunner_1_1communication_1_1Broadcaster_a5c47bd16e024f775a6a690e7127a7151}{}\index{morunner\+::communication\+::\+Broadcaster@{morunner\+::communication\+::\+Broadcaster}!\+\_\+holding@{\+\_\+holding}}
+\index{\+\_\+holding@{\+\_\+holding}!morunner\+::communication\+::\+Broadcaster@{morunner\+::communication\+::\+Broadcaster}}
+\subsubsection[{\+\_\+holding}]{\setlength{\rightskip}{0pt plus 5cm}morunner.\+communication.\+Broadcaster.\+\_\+holding\hspace{0.3cm}{\ttfamily [private]}}\label{classmorunner_1_1communication_1_1Broadcaster_a5c47bd16e024f775a6a690e7127a7151}
+
+
+Definition at line 181 of file communication.\+py.
+
+\hypertarget{classmorunner_1_1communication_1_1Broadcaster_aef0a924920a790ba2380db4d2b93e210}{}\index{morunner\+::communication\+::\+Broadcaster@{morunner\+::communication\+::\+Broadcaster}!\+\_\+listener@{\+\_\+listener}}
+\index{\+\_\+listener@{\+\_\+listener}!morunner\+::communication\+::\+Broadcaster@{morunner\+::communication\+::\+Broadcaster}}
+\subsubsection[{\+\_\+listener}]{\setlength{\rightskip}{0pt plus 5cm}morunner.\+communication.\+Broadcaster.\+\_\+listener\hspace{0.3cm}{\ttfamily [private]}}\label{classmorunner_1_1communication_1_1Broadcaster_aef0a924920a790ba2380db4d2b93e210}
+
+
+Definition at line 185 of file communication.\+py.
+
+\hypertarget{classmorunner_1_1communication_1_1Broadcaster_a7d493d4d4af6ae6ace1e22f38e32c6c0}{}\index{morunner\+::communication\+::\+Broadcaster@{morunner\+::communication\+::\+Broadcaster}!\+\_\+publishers@{\+\_\+publishers}}
+\index{\+\_\+publishers@{\+\_\+publishers}!morunner\+::communication\+::\+Broadcaster@{morunner\+::communication\+::\+Broadcaster}}
+\subsubsection[{\+\_\+publishers}]{\setlength{\rightskip}{0pt plus 5cm}morunner.\+communication.\+Broadcaster.\+\_\+publishers\hspace{0.3cm}{\ttfamily [private]}}\label{classmorunner_1_1communication_1_1Broadcaster_a7d493d4d4af6ae6ace1e22f38e32c6c0}
+
+
+Definition at line 178 of file communication.\+py.
+
+
+
+Referenced by morunner.\+communication.\+Broadcaster.\+add\+\_\+publisher().
+
+\hypertarget{classmorunner_1_1communication_1_1Broadcaster_acc9ff1f0cf6bb65e494d8cacf497886f}{}\index{morunner\+::communication\+::\+Broadcaster@{morunner\+::communication\+::\+Broadcaster}!\+\_\+subscribers@{\+\_\+subscribers}}
+\index{\+\_\+subscribers@{\+\_\+subscribers}!morunner\+::communication\+::\+Broadcaster@{morunner\+::communication\+::\+Broadcaster}}
+\subsubsection[{\+\_\+subscribers}]{\setlength{\rightskip}{0pt plus 5cm}morunner.\+communication.\+Broadcaster.\+\_\+subscribers\hspace{0.3cm}{\ttfamily [private]}}\label{classmorunner_1_1communication_1_1Broadcaster_acc9ff1f0cf6bb65e494d8cacf497886f}
+
+
+Definition at line 179 of file communication.\+py.
+
+
+
+Referenced by morunner.\+communication.\+Broadcaster.\+add\+\_\+subscriber().
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/morunner/\hyperlink{communication_8py}{communication.\+py}\end{DoxyCompactItemize}

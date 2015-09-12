@@ -1,0 +1,15 @@
+
+;; Function int main() (null)
+;; enabled by -tree-original
+
+
+{
+  int a = 1;
+  double b = 2.1699999999999999289457264239899814128875732421875e+0;
+
+  <<cleanup_point   int a = 1;>>;
+  <<cleanup_point   double b = 2.1699999999999999289457264239899814128875732421875e+0;>>;
+  return <retval> = 0;
+}
+return <retval> = 0;
+

@@ -1,0 +1,150 @@
+\hypertarget{classrunner_1_1communication_1_1MessageDescription}{}\section{runner.\+communication.\+Message\+Description Class Reference}
+\label{classrunner_1_1communication_1_1MessageDescription}\index{runner.\+communication.\+Message\+Description@{runner.\+communication.\+Message\+Description}}
+
+
+Inheritance diagram for runner.\+communication.\+Message\+Description\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=235pt]{classrunner_1_1communication_1_1MessageDescription__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for runner.\+communication.\+Message\+Description\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=235pt]{classrunner_1_1communication_1_1MessageDescription__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classrunner_1_1communication_1_1MessageDescription_acbdbcbee3fe33909611ca558b954a7d0}{\+\_\+\+\_\+init\+\_\+\+\_\+}
+\item 
+def \hyperlink{classrunner_1_1communication_1_1MessageDescription_a4684f29a7a72d88995a5ff59986947e1}{action} (self)
+\item 
+def \hyperlink{classrunner_1_1communication_1_1MessageDescription_af7eb221bff779d7e6aec8138838eb111}{subject} (self)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classrunner_1_1communication_1_1MessageDescription_a9cec8aff1ff317cc2accd298d079e8ec}{\+\_\+action}
+\item 
+\hyperlink{classrunner_1_1communication_1_1MessageDescription_a9dc8593ec30b4b25b0ceac9f10d01242}{\+\_\+subject}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}Provides data about a message, which subscribers can use to decide if they
+are "interested."
+\end{DoxyVerb}
+ 
+
+Definition at line 91 of file communication.\+py.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classrunner_1_1communication_1_1MessageDescription_acbdbcbee3fe33909611ca558b954a7d0}{}\index{runner\+::communication\+::\+Message\+Description@{runner\+::communication\+::\+Message\+Description}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!runner\+::communication\+::\+Message\+Description@{runner\+::communication\+::\+Message\+Description}}
+\subsubsection[{\+\_\+\+\_\+init\+\_\+\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}def runner.\+communication.\+Message\+Description.\+\_\+\+\_\+init\+\_\+\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{action}
+\end{DoxyParamCaption}
+)}\label{classrunner_1_1communication_1_1MessageDescription_acbdbcbee3fe33909611ca558b954a7d0}
+
+
+Definition at line 98 of file communication.\+py.
+
+
+\begin{DoxyCode}
+98                  action: Action,
+99                  subject: Subject
+100                 ) -> \textcolor{keywordtype}{None}:
+101         self.\hyperlink{classrunner_1_1communication_1_1MessageDescription_a9cec8aff1ff317cc2accd298d079e8ec}{\_action} = action
+102         self.\hyperlink{classrunner_1_1communication_1_1MessageDescription_a9dc8593ec30b4b25b0ceac9f10d01242}{\_subject} = subject
+103 
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classrunner_1_1communication_1_1MessageDescription_a4684f29a7a72d88995a5ff59986947e1}{}\index{runner\+::communication\+::\+Message\+Description@{runner\+::communication\+::\+Message\+Description}!action@{action}}
+\index{action@{action}!runner\+::communication\+::\+Message\+Description@{runner\+::communication\+::\+Message\+Description}}
+\subsubsection[{action(self)}]{\setlength{\rightskip}{0pt plus 5cm}def runner.\+communication.\+Message\+Description.\+action (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{Action}
+\end{DoxyParamCaption}
+)}\label{classrunner_1_1communication_1_1MessageDescription_a4684f29a7a72d88995a5ff59986947e1}
+
+
+Definition at line 105 of file communication.\+py.
+
+
+
+References runner.\+communication.\+Message\+Description.\+\_\+action.
+
+
+\begin{DoxyCode}
+105     \textcolor{keyword}{def }\hyperlink{classrunner_1_1communication_1_1MessageDescription_a4684f29a7a72d88995a5ff59986947e1}{action}(self) -> Action:
+106         \textcolor{keywordflow}{return} self.\hyperlink{classrunner_1_1communication_1_1MessageDescription_a9cec8aff1ff317cc2accd298d079e8ec}{\_action}
+107 
+\end{DoxyCode}
+\hypertarget{classrunner_1_1communication_1_1MessageDescription_af7eb221bff779d7e6aec8138838eb111}{}\index{runner\+::communication\+::\+Message\+Description@{runner\+::communication\+::\+Message\+Description}!subject@{subject}}
+\index{subject@{subject}!runner\+::communication\+::\+Message\+Description@{runner\+::communication\+::\+Message\+Description}}
+\subsubsection[{subject(self)}]{\setlength{\rightskip}{0pt plus 5cm}def runner.\+communication.\+Message\+Description.\+subject (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{Subject}
+\end{DoxyParamCaption}
+)}\label{classrunner_1_1communication_1_1MessageDescription_af7eb221bff779d7e6aec8138838eb111}
+
+
+Definition at line 109 of file communication.\+py.
+
+
+
+References runner.\+communication.\+Message\+Description.\+\_\+subject.
+
+
+\begin{DoxyCode}
+109     \textcolor{keyword}{def }\hyperlink{classrunner_1_1communication_1_1MessageDescription_af7eb221bff779d7e6aec8138838eb111}{subject}(self) -> Subject:
+110         \textcolor{keywordflow}{return} self.\hyperlink{classrunner_1_1communication_1_1MessageDescription_a9dc8593ec30b4b25b0ceac9f10d01242}{\_subject}
+111 
+112 
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classrunner_1_1communication_1_1MessageDescription_a9cec8aff1ff317cc2accd298d079e8ec}{}\index{runner\+::communication\+::\+Message\+Description@{runner\+::communication\+::\+Message\+Description}!\+\_\+action@{\+\_\+action}}
+\index{\+\_\+action@{\+\_\+action}!runner\+::communication\+::\+Message\+Description@{runner\+::communication\+::\+Message\+Description}}
+\subsubsection[{\+\_\+action}]{\setlength{\rightskip}{0pt plus 5cm}runner.\+communication.\+Message\+Description.\+\_\+action\hspace{0.3cm}{\ttfamily [private]}}\label{classrunner_1_1communication_1_1MessageDescription_a9cec8aff1ff317cc2accd298d079e8ec}
+
+
+Definition at line 101 of file communication.\+py.
+
+
+
+Referenced by runner.\+communication.\+Message\+Description.\+action().
+
+\hypertarget{classrunner_1_1communication_1_1MessageDescription_a9dc8593ec30b4b25b0ceac9f10d01242}{}\index{runner\+::communication\+::\+Message\+Description@{runner\+::communication\+::\+Message\+Description}!\+\_\+subject@{\+\_\+subject}}
+\index{\+\_\+subject@{\+\_\+subject}!runner\+::communication\+::\+Message\+Description@{runner\+::communication\+::\+Message\+Description}}
+\subsubsection[{\+\_\+subject}]{\setlength{\rightskip}{0pt plus 5cm}runner.\+communication.\+Message\+Description.\+\_\+subject\hspace{0.3cm}{\ttfamily [private]}}\label{classrunner_1_1communication_1_1MessageDescription_a9dc8593ec30b4b25b0ceac9f10d01242}
+
+
+Definition at line 102 of file communication.\+py.
+
+
+
+Referenced by runner.\+communication.\+Message\+Description.\+subject().
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/runner/\hyperlink{communication_8py}{communication.\+py}\end{DoxyCompactItemize}

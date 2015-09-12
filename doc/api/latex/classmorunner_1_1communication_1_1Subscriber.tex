@@ -1,0 +1,111 @@
+\hypertarget{classmorunner_1_1communication_1_1Subscriber}{}\section{morunner.\+communication.\+Subscriber Class Reference}
+\label{classmorunner_1_1communication_1_1Subscriber}\index{morunner.\+communication.\+Subscriber@{morunner.\+communication.\+Subscriber}}
+
+
+Inheritance diagram for morunner.\+communication.\+Subscriber\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classmorunner_1_1communication_1_1Subscriber__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for morunner.\+communication.\+Subscriber\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classmorunner_1_1communication_1_1Subscriber__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classmorunner_1_1communication_1_1Subscriber_ad16726eaf7536b090444a89c1d8b047b}{listen} (self)
+\item 
+def \hyperlink{classmorunner_1_1communication_1_1Subscriber_a1d8ab4ea99db86ba77176f6f282db254}{is\+\_\+interested}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 153 of file communication.\+py.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classmorunner_1_1communication_1_1Subscriber_a1d8ab4ea99db86ba77176f6f282db254}{}\index{morunner\+::communication\+::\+Subscriber@{morunner\+::communication\+::\+Subscriber}!is\+\_\+interested@{is\+\_\+interested}}
+\index{is\+\_\+interested@{is\+\_\+interested}!morunner\+::communication\+::\+Subscriber@{morunner\+::communication\+::\+Subscriber}}
+\subsubsection[{is\+\_\+interested}]{\setlength{\rightskip}{0pt plus 5cm}def morunner.\+communication.\+Subscriber.\+is\+\_\+interested (
+\begin{DoxyParamCaption}
+\item[{}]{cls, }
+\item[{}]{message}
+\end{DoxyParamCaption}
+)}\label{classmorunner_1_1communication_1_1Subscriber_a1d8ab4ea99db86ba77176f6f282db254}
+
+
+Definition at line 166 of file communication.\+py.
+
+
+\begin{DoxyCode}
+166     \textcolor{keyword}{def }\hyperlink{classmorunner_1_1communication_1_1Subscriber_a1d8ab4ea99db86ba77176f6f282db254}{is\_interested}(cls, message: Message) -> bool:
+167         \textcolor{stringliteral}{"""}
+168 \textcolor{stringliteral}{        Override this method to make your subscriber only collect the messages}
+169 \textcolor{stringliteral}{        it cares about.}
+170 \textcolor{stringliteral}{        """}
+171         \textcolor{keywordflow}{raise} NotImplementedError(\textcolor{stringliteral}{"Subscriber must be subclassed!"})
+172 
+173 
+\end{DoxyCode}
+\hypertarget{classmorunner_1_1communication_1_1Subscriber_ad16726eaf7536b090444a89c1d8b047b}{}\index{morunner\+::communication\+::\+Subscriber@{morunner\+::communication\+::\+Subscriber}!listen@{listen}}
+\index{listen@{listen}!morunner\+::communication\+::\+Subscriber@{morunner\+::communication\+::\+Subscriber}}
+\subsubsection[{listen(self)}]{\setlength{\rightskip}{0pt plus 5cm}def morunner.\+communication.\+Subscriber.\+listen (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{None}
+\end{DoxyParamCaption}
+)}\label{classmorunner_1_1communication_1_1Subscriber_ad16726eaf7536b090444a89c1d8b047b}
+\begin{DoxyVerb}Listen for messages from the broadcaster.
+\end{DoxyVerb}
+ 
+
+Definition at line 155 of file communication.\+py.
+
+
+
+References morunner.\+communication.\+\_\+\+Transmitter.\+connection().
+
+
+\begin{DoxyCode}
+155     \textcolor{keyword}{def }\hyperlink{classmorunner_1_1communication_1_1Subscriber_ad16726eaf7536b090444a89c1d8b047b}{listen}(self) -> None:
+156         \textcolor{stringliteral}{"""}
+157 \textcolor{stringliteral}{        Listen for messages from the broadcaster.}
+158 \textcolor{stringliteral}{        """}
+159         \textcolor{keywordflow}{while} self.\hyperlink{classmorunner_1_1communication_1_1__Transmitter_a054317d3dbeecd42d6bbb81612d67ea5}{connection}:
+160             \textcolor{keywordflow}{for} ready\_connection \textcolor{keywordflow}{in} multiprocessing.connection.wait([self.
+      \hyperlink{classmorunner_1_1communication_1_1__Transmitter_a054317d3dbeecd42d6bbb81612d67ea5}{connection}]):
+161                 message = ready\_connection.recv()
+162                 \textcolor{comment}{# TODO: Deal with message}
+163                 \textcolor{comment}{# print("got a ", x)}
+164 
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmorunner_1_1communication_1_1Subscriber_ad16726eaf7536b090444a89c1d8b047b_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/morunner/\hyperlink{communication_8py}{communication.\+py}\end{DoxyCompactItemize}

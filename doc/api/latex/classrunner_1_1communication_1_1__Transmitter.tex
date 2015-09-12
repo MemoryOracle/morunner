@@ -1,0 +1,148 @@
+\hypertarget{classrunner_1_1communication_1_1__Transmitter}{}\section{runner.\+communication.\+\_\+\+Transmitter Class Reference}
+\label{classrunner_1_1communication_1_1__Transmitter}\index{runner.\+communication.\+\_\+\+Transmitter@{runner.\+communication.\+\_\+\+Transmitter}}
+
+
+Inheritance diagram for runner.\+communication.\+\_\+\+Transmitter\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrunner_1_1communication_1_1__Transmitter__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for runner.\+communication.\+\_\+\+Transmitter\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=201pt]{classrunner_1_1communication_1_1__Transmitter__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classrunner_1_1communication_1_1__Transmitter_aa176b9fd3b6dec2baae5814ce3ed5884}{\+\_\+\+\_\+init\+\_\+\+\_\+} (self)
+\item 
+def \hyperlink{classrunner_1_1communication_1_1__Transmitter_a535caf9b469e0665ea146a02136719b8}{connect}
+\item 
+def \hyperlink{classrunner_1_1communication_1_1__Transmitter_a3aade0da93d3fedb18bec5c5f90a4dd3}{connection} (self)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classrunner_1_1communication_1_1__Transmitter_a2c4343348f0825cac9384db1ddcd9c4e}{\+\_\+connection}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 127 of file communication.\+py.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classrunner_1_1communication_1_1__Transmitter_aa176b9fd3b6dec2baae5814ce3ed5884}{}\index{runner\+::communication\+::\+\_\+\+Transmitter@{runner\+::communication\+::\+\_\+\+Transmitter}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!runner\+::communication\+::\+\_\+\+Transmitter@{runner\+::communication\+::\+\_\+\+Transmitter}}
+\subsubsection[{\+\_\+\+\_\+init\+\_\+\+\_\+(self)}]{\setlength{\rightskip}{0pt plus 5cm}def runner.\+communication.\+\_\+\+Transmitter.\+\_\+\+\_\+init\+\_\+\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{None}
+\end{DoxyParamCaption}
+)}\label{classrunner_1_1communication_1_1__Transmitter_aa176b9fd3b6dec2baae5814ce3ed5884}
+
+
+Definition at line 129 of file communication.\+py.
+
+
+\begin{DoxyCode}
+129     \textcolor{keyword}{def }\hyperlink{classrunner_1_1communication_1_1__Transmitter_aa176b9fd3b6dec2baae5814ce3ed5884}{\_\_init\_\_}(self) -> None:
+130         super().\hyperlink{classrunner_1_1communication_1_1__Transmitter_aa176b9fd3b6dec2baae5814ce3ed5884}{\_\_init\_\_}()
+131         self.\hyperlink{classrunner_1_1communication_1_1__Transmitter_a2c4343348f0825cac9384db1ddcd9c4e}{\_connection} = \textcolor{keywordtype}{None}
+132 
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classrunner_1_1communication_1_1__Transmitter_a535caf9b469e0665ea146a02136719b8}{}\index{runner\+::communication\+::\+\_\+\+Transmitter@{runner\+::communication\+::\+\_\+\+Transmitter}!connect@{connect}}
+\index{connect@{connect}!runner\+::communication\+::\+\_\+\+Transmitter@{runner\+::communication\+::\+\_\+\+Transmitter}}
+\subsubsection[{connect}]{\setlength{\rightskip}{0pt plus 5cm}def runner.\+communication.\+\_\+\+Transmitter.\+connect (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{connection}
+\end{DoxyParamCaption}
+)}\label{classrunner_1_1communication_1_1__Transmitter_a535caf9b469e0665ea146a02136719b8}
+
+
+Definition at line 134 of file communication.\+py.
+
+
+
+References runner.\+communication.\+\_\+\+Transmitter.\+\_\+connection.
+
+
+\begin{DoxyCode}
+134                 connection: multiprocessing.connection.Connection
+135                ) -> \textcolor{keywordtype}{None}:
+136         self.\hyperlink{classrunner_1_1communication_1_1__Transmitter_a2c4343348f0825cac9384db1ddcd9c4e}{\_connection} = connection
+137 
+\end{DoxyCode}
+\hypertarget{classrunner_1_1communication_1_1__Transmitter_a3aade0da93d3fedb18bec5c5f90a4dd3}{}\index{runner\+::communication\+::\+\_\+\+Transmitter@{runner\+::communication\+::\+\_\+\+Transmitter}!connection@{connection}}
+\index{connection@{connection}!runner\+::communication\+::\+\_\+\+Transmitter@{runner\+::communication\+::\+\_\+\+Transmitter}}
+\subsubsection[{connection(self)}]{\setlength{\rightskip}{0pt plus 5cm}def runner.\+communication.\+\_\+\+Transmitter.\+connection (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classrunner_1_1communication_1_1__Transmitter_a3aade0da93d3fedb18bec5c5f90a4dd3}
+
+
+Definition at line 139 of file communication.\+py.
+
+
+
+References runner.\+communication.\+\_\+\+Transmitter.\+\_\+connection.
+
+
+
+Referenced by runner.\+communication.\+Subscriber.\+listen(), and runner.\+communication.\+Publisher.\+produce().
+
+
+\begin{DoxyCode}
+139     \textcolor{keyword}{def }\hyperlink{classrunner_1_1communication_1_1__Transmitter_a3aade0da93d3fedb18bec5c5f90a4dd3}{connection}(self):
+140         \textcolor{keywordflow}{return} self.\hyperlink{classrunner_1_1communication_1_1__Transmitter_a2c4343348f0825cac9384db1ddcd9c4e}{\_connection}
+141 
+142 
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrunner_1_1communication_1_1__Transmitter_a3aade0da93d3fedb18bec5c5f90a4dd3_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classrunner_1_1communication_1_1__Transmitter_a2c4343348f0825cac9384db1ddcd9c4e}{}\index{runner\+::communication\+::\+\_\+\+Transmitter@{runner\+::communication\+::\+\_\+\+Transmitter}!\+\_\+connection@{\+\_\+connection}}
+\index{\+\_\+connection@{\+\_\+connection}!runner\+::communication\+::\+\_\+\+Transmitter@{runner\+::communication\+::\+\_\+\+Transmitter}}
+\subsubsection[{\+\_\+connection}]{\setlength{\rightskip}{0pt plus 5cm}runner.\+communication.\+\_\+\+Transmitter.\+\_\+connection\hspace{0.3cm}{\ttfamily [private]}}\label{classrunner_1_1communication_1_1__Transmitter_a2c4343348f0825cac9384db1ddcd9c4e}
+
+
+Definition at line 131 of file communication.\+py.
+
+
+
+Referenced by runner.\+communication.\+\_\+\+Transmitter.\+connect(), and runner.\+communication.\+\_\+\+Transmitter.\+connection().
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/runner/\hyperlink{communication_8py}{communication.\+py}\end{DoxyCompactItemize}

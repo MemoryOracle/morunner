@@ -1,0 +1,5 @@
+<map id="communication.Publisher" name="communication.Publisher">
+<area shape="rect" id="node2" href="$classcommunication_1_1__Transmitter.html" title="{communication._Transmitter\n|&#45; _connection\l|+ __init__()\l+ connect()\l+ connection()\l}" alt="" coords="5,411,192,517"/>
+<area shape="rect" id="node3" href="$classidentity_1_1Unique.html" title="{identity.Unique\n||+ __init__()\l}" alt="" coords="44,285,153,363"/>
+<area shape="rect" id="node4" href="$classidentity_1_1Identified.html" title="{identity.Identified\n|&#45; __identity\l|+ __init__()\l+ __hash__()\l+ __eq__()\l}" alt="" coords="38,131,159,237"/>
+</map>

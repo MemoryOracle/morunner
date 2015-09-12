@@ -1,0 +1,4 @@
+<map id="morunner.communication.Broadcaster" name="morunner.communication.Broadcaster">
+<area shape="rect" id="node2" href="$classmorunner_1_1identity_1_1Unique.html" title="{morunner.identity.Unique\n||+ __init__()\l}" alt="" coords="43,285,210,363"/>
+<area shape="rect" id="node3" href="$classmorunner_1_1identity_1_1Identified.html" title="{morunner.identity.Identified\n|&#45; __identity\l|+ __init__()\l+ __hash__()\l+ __eq__()\l}" alt="" coords="37,131,216,237"/>
+</map>

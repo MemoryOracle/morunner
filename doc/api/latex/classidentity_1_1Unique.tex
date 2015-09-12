@@ -1,0 +1,69 @@
+\hypertarget{classidentity_1_1Unique}{}\section{identity.\+Unique Class Reference}
+\label{classidentity_1_1Unique}\index{identity.\+Unique@{identity.\+Unique}}
+
+
+Inheritance diagram for identity.\+Unique\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classidentity_1_1Unique__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for identity.\+Unique\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=171pt]{classidentity_1_1Unique__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classidentity_1_1Unique_ae4ffdf9b31ac906ae437f4a94e90ffbb}{\+\_\+\+\_\+init\+\_\+\+\_\+} (self)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}Assigns a (globally) unique id tag to every instance in __init__.
+\end{DoxyVerb}
+ 
+
+Definition at line 58 of file identity.\+py.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classidentity_1_1Unique_ae4ffdf9b31ac906ae437f4a94e90ffbb}{}\index{identity\+::\+Unique@{identity\+::\+Unique}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!identity\+::\+Unique@{identity\+::\+Unique}}
+\subsubsection[{\+\_\+\+\_\+init\+\_\+\+\_\+(self)}]{\setlength{\rightskip}{0pt plus 5cm}def identity.\+Unique.\+\_\+\+\_\+init\+\_\+\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{None}
+\end{DoxyParamCaption}
+)}\label{classidentity_1_1Unique_ae4ffdf9b31ac906ae437f4a94e90ffbb}
+\begin{DoxyVerb}Passes a function (currently uuid.uuid4) to the Identified.__init__
+call.  This has the effect of giving every instance of unique a
+different hash value.
+\end{DoxyVerb}
+ 
+
+Definition at line 63 of file identity.\+py.
+
+
+\begin{DoxyCode}
+63     \textcolor{keyword}{def }\hyperlink{classidentity_1_1Unique_ae4ffdf9b31ac906ae437f4a94e90ffbb}{\_\_init\_\_}(self) -> None:
+64         \textcolor{stringliteral}{"""}
+65 \textcolor{stringliteral}{        Passes a function (currently uuid.uuid4) to the Identified.\_\_init\_\_}
+66 \textcolor{stringliteral}{        call.  This has the effect of giving every instance of unique a}
+67 \textcolor{stringliteral}{        different hash value.}
+68 \textcolor{stringliteral}{        """}
+69         super(Unique, self).\hyperlink{classidentity_1_1Unique_ae4ffdf9b31ac906ae437f4a94e90ffbb}{\_\_init\_\_}(uuid.uuid4)
+70 \end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/runner/\hyperlink{identity_8py}{identity.\+py}\end{DoxyCompactItemize}

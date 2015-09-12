@@ -1,0 +1,111 @@
+\hypertarget{classrunner_1_1communication_1_1Subscriber}{}\section{runner.\+communication.\+Subscriber Class Reference}
+\label{classrunner_1_1communication_1_1Subscriber}\index{runner.\+communication.\+Subscriber@{runner.\+communication.\+Subscriber}}
+
+
+Inheritance diagram for runner.\+communication.\+Subscriber\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classrunner_1_1communication_1_1Subscriber__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for runner.\+communication.\+Subscriber\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classrunner_1_1communication_1_1Subscriber__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classrunner_1_1communication_1_1Subscriber_a7e63bf085b8658ee6439cfd4629e9988}{listen} (self)
+\item 
+def \hyperlink{classrunner_1_1communication_1_1Subscriber_a0c8e5ee6703b5bb6ad807d100db40a4f}{is\+\_\+interested}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 153 of file communication.\+py.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classrunner_1_1communication_1_1Subscriber_a0c8e5ee6703b5bb6ad807d100db40a4f}{}\index{runner\+::communication\+::\+Subscriber@{runner\+::communication\+::\+Subscriber}!is\+\_\+interested@{is\+\_\+interested}}
+\index{is\+\_\+interested@{is\+\_\+interested}!runner\+::communication\+::\+Subscriber@{runner\+::communication\+::\+Subscriber}}
+\subsubsection[{is\+\_\+interested}]{\setlength{\rightskip}{0pt plus 5cm}def runner.\+communication.\+Subscriber.\+is\+\_\+interested (
+\begin{DoxyParamCaption}
+\item[{}]{cls, }
+\item[{}]{message}
+\end{DoxyParamCaption}
+)}\label{classrunner_1_1communication_1_1Subscriber_a0c8e5ee6703b5bb6ad807d100db40a4f}
+
+
+Definition at line 166 of file communication.\+py.
+
+
+\begin{DoxyCode}
+166     \textcolor{keyword}{def }\hyperlink{classrunner_1_1communication_1_1Subscriber_a0c8e5ee6703b5bb6ad807d100db40a4f}{is\_interested}(cls, message: Message) -> bool:
+167         \textcolor{stringliteral}{"""}
+168 \textcolor{stringliteral}{        Override this method to make your subscriber only collect the messages}
+169 \textcolor{stringliteral}{        it cares about.}
+170 \textcolor{stringliteral}{        """}
+171         \textcolor{keywordflow}{raise} NotImplementedError(\textcolor{stringliteral}{"Subscriber must be subclassed!"})
+172 
+173 
+\end{DoxyCode}
+\hypertarget{classrunner_1_1communication_1_1Subscriber_a7e63bf085b8658ee6439cfd4629e9988}{}\index{runner\+::communication\+::\+Subscriber@{runner\+::communication\+::\+Subscriber}!listen@{listen}}
+\index{listen@{listen}!runner\+::communication\+::\+Subscriber@{runner\+::communication\+::\+Subscriber}}
+\subsubsection[{listen(self)}]{\setlength{\rightskip}{0pt plus 5cm}def runner.\+communication.\+Subscriber.\+listen (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{None}
+\end{DoxyParamCaption}
+)}\label{classrunner_1_1communication_1_1Subscriber_a7e63bf085b8658ee6439cfd4629e9988}
+\begin{DoxyVerb}Listen for messages from the broadcaster.
+\end{DoxyVerb}
+ 
+
+Definition at line 155 of file communication.\+py.
+
+
+
+References runner.\+communication.\+\_\+\+Transmitter.\+connection().
+
+
+\begin{DoxyCode}
+155     \textcolor{keyword}{def }\hyperlink{classrunner_1_1communication_1_1Subscriber_a7e63bf085b8658ee6439cfd4629e9988}{listen}(self) -> None:
+156         \textcolor{stringliteral}{"""}
+157 \textcolor{stringliteral}{        Listen for messages from the broadcaster.}
+158 \textcolor{stringliteral}{        """}
+159         \textcolor{keywordflow}{while} self.\hyperlink{classrunner_1_1communication_1_1__Transmitter_a3aade0da93d3fedb18bec5c5f90a4dd3}{connection}:
+160             \textcolor{keywordflow}{for} ready\_connection \textcolor{keywordflow}{in} multiprocessing.connection.wait([self.
+      \hyperlink{classrunner_1_1communication_1_1__Transmitter_a3aade0da93d3fedb18bec5c5f90a4dd3}{connection}]):
+161                 message = ready\_connection.recv()
+162                 \textcolor{comment}{# TODO: Deal with message}
+163                 \textcolor{comment}{# print("got a ", x)}
+164 
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrunner_1_1communication_1_1Subscriber_a7e63bf085b8658ee6439cfd4629e9988_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/runner/\hyperlink{communication_8py}{communication.\+py}\end{DoxyCompactItemize}

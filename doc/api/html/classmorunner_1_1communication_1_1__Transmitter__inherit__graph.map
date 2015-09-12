@@ -1,0 +1,6 @@
+<map id="morunner.communication._Transmitter" name="morunner.communication._Transmitter">
+<area shape="rect" id="node5" href="$classmorunner_1_1communication_1_1Publisher.html" title="{morunner.communication.Publisher\n||+ produce()\l}" alt="" coords="5,587,232,665"/>
+<area shape="rect" id="node6" href="$classmorunner_1_1communication_1_1Subscriber.html" title="{morunner.communication.Subscriber\n||+ listen()\l+ is_interested()\l}" alt="" coords="256,580,491,672"/>
+<area shape="rect" id="node2" href="$classmorunner_1_1identity_1_1Unique.html" title="{morunner.identity.Unique\n||+ __init__()\l}" alt="" coords="162,285,329,363"/>
+<area shape="rect" id="node3" href="$classmorunner_1_1identity_1_1Identified.html" title="{morunner.identity.Identified\n|&#45; __identity\l|+ __init__()\l+ __hash__()\l+ __eq__()\l}" alt="" coords="156,131,335,237"/>
+</map>

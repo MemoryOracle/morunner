@@ -1,0 +1,8 @@
+<map id="morunner.identity.Identified" name="morunner.identity.Identified">
+<area shape="rect" id="node3" href="$classmorunner_1_1identity_1_1Unique.html" title="{morunner.identity.Unique\n||+ __init__()\l}" alt="" coords="394,285,561,363"/>
+<area shape="rect" id="node4" href="$classmorunner_1_1communication_1_1__Transmitter.html" title="{morunner.communication.\l_Transmitter\n|&#45; _connection\l|+ __init__()\l+ connect()\l+ connection()\l}" alt="" coords="159,455,331,576"/>
+<area shape="rect" id="node7" href="$classmorunner_1_1communication_1_1Broadcaster.html" title="{morunner.communication.Broadcaster\n|&#45; _publishers\l&#45; _subscribers\l&#45; _holding\l&#45; _listener\l&#45; _announcer\l|+ __init__()\l+ add_publisher()\l+ add_subscriber()\l+ collect()\l+ broadcast()\l+ run()\l}" alt="" coords="356,411,599,620"/>
+<area shape="rect" id="node8" href="$classmorunner_1_1communication_1_1Message.html" title="{morunner.communication.Message\n|&#45; _description\l&#45; _data\l|+ __init__()\l}" alt="" coords="623,469,849,561"/>
+<area shape="rect" id="node5" href="$classmorunner_1_1communication_1_1Publisher.html" title="{morunner.communication.Publisher\n||+ produce()\l}" alt="" coords="5,675,232,753"/>
+<area shape="rect" id="node6" href="$classmorunner_1_1communication_1_1Subscriber.html" title="{morunner.communication.Subscriber\n||+ listen()\l+ is_interested()\l}" alt="" coords="256,668,491,760"/>
+</map>

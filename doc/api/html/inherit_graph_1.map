@@ -1,0 +1,12 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node2" href="$classmorunner_1_1break_1_1Task.html" title="morunner.break.Task" alt="" coords="151,5,296,32"/>
+<area shape="rect" id="node3" href="$classmorunner_1_1communication_1_1MessageDescription.html" title="morunner.communication.Message\lDescription" alt="" coords="111,57,336,98"/>
+<area shape="rect" id="node4" href="$classmorunner_1_1identity_1_1Identified.html" title="morunner.identity.Identified" alt="" coords="134,123,313,149"/>
+<area shape="rect" id="node11" href="$classmorunner_1_1registry_1_1Registry.html" title="morunner.registry.Registry" alt="" coords="135,173,311,200"/>
+<area shape="rect" id="node5" href="$classmorunner_1_1identity_1_1Unique.html" title="morunner.identity.Unique" alt="" coords="384,123,551,149"/>
+<area shape="rect" id="node6" href="$classmorunner_1_1communication_1_1__Transmitter.html" title="morunner.communication.\l_Transmitter" alt="" coords="634,57,806,98"/>
+<area shape="rect" id="node9" href="$classmorunner_1_1communication_1_1Broadcaster.html" title="morunner.communication.Broadcaster" alt="" coords="599,123,841,149"/>
+<area shape="rect" id="node10" href="$classmorunner_1_1communication_1_1Message.html" title="morunner.communication.Message" alt="" coords="607,173,833,200"/>
+<area shape="rect" id="node7" href="$classmorunner_1_1communication_1_1Publisher.html" title="morunner.communication.Publisher" alt="" coords="893,39,1120,65"/>
+<area shape="rect" id="node8" href="$classmorunner_1_1communication_1_1Subscriber.html" title="morunner.communication.Subscriber" alt="" coords="889,89,1124,116"/>
+</map>

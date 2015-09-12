@@ -1,0 +1,4 @@
+<map id="runner.communication.Message" name="runner.communication.Message">
+<area shape="rect" id="node2" href="$classrunner_1_1identity_1_1Unique.html" title="{runner.identity.Unique\n||+ __init__()\l}" alt="" coords="34,285,183,363"/>
+<area shape="rect" id="node3" href="$classrunner_1_1identity_1_1Identified.html" title="{runner.identity.Identified\n|&#45; __identity\l|+ __init__()\l+ __hash__()\l+ __eq__()\l}" alt="" coords="28,131,189,237"/>
+</map>

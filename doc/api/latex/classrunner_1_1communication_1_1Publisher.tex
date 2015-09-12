@@ -1,0 +1,81 @@
+\hypertarget{classrunner_1_1communication_1_1Publisher}{}\section{runner.\+communication.\+Publisher Class Reference}
+\label{classrunner_1_1communication_1_1Publisher}\index{runner.\+communication.\+Publisher@{runner.\+communication.\+Publisher}}
+
+
+Inheritance diagram for runner.\+communication.\+Publisher\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classrunner_1_1communication_1_1Publisher__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for runner.\+communication.\+Publisher\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classrunner_1_1communication_1_1Publisher__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classrunner_1_1communication_1_1Publisher_a5428c27894232f2e285b85ee32f03860}{produce}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 143 of file communication.\+py.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classrunner_1_1communication_1_1Publisher_a5428c27894232f2e285b85ee32f03860}{}\index{runner\+::communication\+::\+Publisher@{runner\+::communication\+::\+Publisher}!produce@{produce}}
+\index{produce@{produce}!runner\+::communication\+::\+Publisher@{runner\+::communication\+::\+Publisher}}
+\subsubsection[{produce}]{\setlength{\rightskip}{0pt plus 5cm}def runner.\+communication.\+Publisher.\+produce (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{message}
+\end{DoxyParamCaption}
+)}\label{classrunner_1_1communication_1_1Publisher_a5428c27894232f2e285b85ee32f03860}
+
+
+Definition at line 145 of file communication.\+py.
+
+
+
+References runner.\+communication.\+\_\+\+Transmitter.\+connection().
+
+
+\begin{DoxyCode}
+145     \textcolor{keyword}{def }\hyperlink{classrunner_1_1communication_1_1Publisher_a5428c27894232f2e285b85ee32f03860}{produce}(self, message: Message) -> \textcolor{keywordtype}{None}:
+146         \textcolor{stringliteral}{"""}
+147 \textcolor{stringliteral}{        Produce a message for the broadcaster.}
+148 \textcolor{stringliteral}{        """}
+149         \textcolor{keywordflow}{if} self.\hyperlink{classrunner_1_1communication_1_1__Transmitter_a3aade0da93d3fedb18bec5c5f90a4dd3}{connection} \textcolor{keywordflow}{is} \textcolor{keywordflow}{not} \textcolor{keywordtype}{None}:
+150             self.connection.send(message)
+151 
+152 
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrunner_1_1communication_1_1Publisher_a5428c27894232f2e285b85ee32f03860_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/runner/\hyperlink{communication_8py}{communication.\+py}\end{DoxyCompactItemize}

@@ -1,0 +1,26 @@
+int main() ()
+{
+  intD.9 D.2646;
+
+  {
+    intD.9 aD.2643;
+    doubleD.39 bD.2644;
+
+    aD.2643 = 1;
+    bD.2644 = 2.1699999999999999289457264239899814128875732421875e+0;
+    D.2646 = 0;
+    return D.2646;
+  }
+  D.2646 = 0;
+  return D.2646;
+}
+
+
+<built-in> ()
+{
+  # USE = anything 
+  # CLB = anything 
+  __gcov_initD.2677 (&*.LPBX0D.2676);
+}
+
+

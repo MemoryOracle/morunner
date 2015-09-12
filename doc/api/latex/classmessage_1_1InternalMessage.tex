@@ -1,0 +1,156 @@
+\hypertarget{classmessage_1_1InternalMessage}{}\section{message.\+Internal\+Message Class Reference}
+\label{classmessage_1_1InternalMessage}\index{message.\+Internal\+Message@{message.\+Internal\+Message}}
+
+
+Inheritance diagram for message.\+Internal\+Message\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=211pt]{classmessage_1_1InternalMessage__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for message.\+Internal\+Message\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=211pt]{classmessage_1_1InternalMessage__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classmessage_1_1InternalMessage_a706723771ed57321cb3704605dd224b3}{\+\_\+\+\_\+init\+\_\+\+\_\+}
+\item 
+def \hyperlink{classmessage_1_1InternalMessage_a91bab1274078ed322914001d0bcc3a0b}{data} (self)
+\item 
+def \hyperlink{classmessage_1_1InternalMessage_aa68198bb7742b59e6bf138b820aef38d}{f} (self)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classmessage_1_1InternalMessage_a6569b889f2370fd68f8a297d090a8094}{action\+\_\+class}
+\item 
+\hyperlink{classmessage_1_1InternalMessage_ac242550d9ec846a4ab5dc57e4eaf7581}{subject\+\_\+class}
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classmessage_1_1InternalMessage_a8af801826eb30b7b4016e6e6e1c6433b}{\+\_\+data}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}Message between internal components of the runner.
+\end{DoxyVerb}
+ 
+
+Definition at line 98 of file message.\+py.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classmessage_1_1InternalMessage_a706723771ed57321cb3704605dd224b3}{}\index{message\+::\+Internal\+Message@{message\+::\+Internal\+Message}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!message\+::\+Internal\+Message@{message\+::\+Internal\+Message}}
+\subsubsection[{\+\_\+\+\_\+init\+\_\+\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}def message.\+Internal\+Message.\+\_\+\+\_\+init\+\_\+\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{action\+\_\+class}
+\end{DoxyParamCaption}
+)}\label{classmessage_1_1InternalMessage_a706723771ed57321cb3704605dd224b3}
+
+
+Definition at line 104 of file message.\+py.
+
+
+\begin{DoxyCode}
+104                  action\_class: Action,
+105                  subject\_class: Subject,
+106                  data
+107                 ) -> \textcolor{keywordtype}{None}:
+108         super().\hyperlink{classmessage_1_1InternalMessage_a706723771ed57321cb3704605dd224b3}{\_\_init\_\_}()
+109         self.\hyperlink{classmessage_1_1InternalMessage_a6569b889f2370fd68f8a297d090a8094}{action\_class} = action\_class
+110         self.\hyperlink{classmessage_1_1InternalMessage_ac242550d9ec846a4ab5dc57e4eaf7581}{subject\_class} = subject\_class
+111         self.\hyperlink{classmessage_1_1InternalMessage_a8af801826eb30b7b4016e6e6e1c6433b}{\_data} = data
+112 
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classmessage_1_1InternalMessage_a91bab1274078ed322914001d0bcc3a0b}{}\index{message\+::\+Internal\+Message@{message\+::\+Internal\+Message}!data@{data}}
+\index{data@{data}!message\+::\+Internal\+Message@{message\+::\+Internal\+Message}}
+\subsubsection[{data(self)}]{\setlength{\rightskip}{0pt plus 5cm}def message.\+Internal\+Message.\+data (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classmessage_1_1InternalMessage_a91bab1274078ed322914001d0bcc3a0b}
+\begin{DoxyVerb}\end{DoxyVerb}
+ 
+
+Definition at line 114 of file message.\+py.
+
+
+
+References message.\+Internal\+Message.\+\_\+data, and communication.\+Message.\+\_\+data.
+
+
+\begin{DoxyCode}
+114     \textcolor{keyword}{def }\hyperlink{classmessage_1_1InternalMessage_a91bab1274078ed322914001d0bcc3a0b}{data}(self):
+115         \textcolor{stringliteral}{"""}
+116 \textcolor{stringliteral}{}
+117 \textcolor{stringliteral}{        """}
+118         \textcolor{keywordflow}{return} self.\hyperlink{classmessage_1_1InternalMessage_a8af801826eb30b7b4016e6e6e1c6433b}{\_data}
+119 
+\end{DoxyCode}
+\hypertarget{classmessage_1_1InternalMessage_aa68198bb7742b59e6bf138b820aef38d}{}\index{message\+::\+Internal\+Message@{message\+::\+Internal\+Message}!f@{f}}
+\index{f@{f}!message\+::\+Internal\+Message@{message\+::\+Internal\+Message}}
+\subsubsection[{f(self)}]{\setlength{\rightskip}{0pt plus 5cm}def message.\+Internal\+Message.\+f (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classmessage_1_1InternalMessage_aa68198bb7742b59e6bf138b820aef38d}
+
+
+Definition at line 120 of file message.\+py.
+
+
+\begin{DoxyCode}
+120     \textcolor{keyword}{def }\hyperlink{classmessage_1_1InternalMessage_aa68198bb7742b59e6bf138b820aef38d}{f}(self):
+121         \textcolor{keywordflow}{pass}
+122 \end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classmessage_1_1InternalMessage_a8af801826eb30b7b4016e6e6e1c6433b}{}\index{message\+::\+Internal\+Message@{message\+::\+Internal\+Message}!\+\_\+data@{\+\_\+data}}
+\index{\+\_\+data@{\+\_\+data}!message\+::\+Internal\+Message@{message\+::\+Internal\+Message}}
+\subsubsection[{\+\_\+data}]{\setlength{\rightskip}{0pt plus 5cm}message.\+Internal\+Message.\+\_\+data\hspace{0.3cm}{\ttfamily [private]}}\label{classmessage_1_1InternalMessage_a8af801826eb30b7b4016e6e6e1c6433b}
+
+
+Definition at line 111 of file message.\+py.
+
+
+
+Referenced by message.\+Internal\+Message.\+data().
+
+\hypertarget{classmessage_1_1InternalMessage_a6569b889f2370fd68f8a297d090a8094}{}\index{message\+::\+Internal\+Message@{message\+::\+Internal\+Message}!action\+\_\+class@{action\+\_\+class}}
+\index{action\+\_\+class@{action\+\_\+class}!message\+::\+Internal\+Message@{message\+::\+Internal\+Message}}
+\subsubsection[{action\+\_\+class}]{\setlength{\rightskip}{0pt plus 5cm}message.\+Internal\+Message.\+action\+\_\+class}\label{classmessage_1_1InternalMessage_a6569b889f2370fd68f8a297d090a8094}
+
+
+Definition at line 109 of file message.\+py.
+
+\hypertarget{classmessage_1_1InternalMessage_ac242550d9ec846a4ab5dc57e4eaf7581}{}\index{message\+::\+Internal\+Message@{message\+::\+Internal\+Message}!subject\+\_\+class@{subject\+\_\+class}}
+\index{subject\+\_\+class@{subject\+\_\+class}!message\+::\+Internal\+Message@{message\+::\+Internal\+Message}}
+\subsubsection[{subject\+\_\+class}]{\setlength{\rightskip}{0pt plus 5cm}message.\+Internal\+Message.\+subject\+\_\+class}\label{classmessage_1_1InternalMessage_ac242550d9ec846a4ab5dc57e4eaf7581}
+
+
+Definition at line 110 of file message.\+py.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/runner/\hyperlink{message_8py}{message.\+py}\end{DoxyCompactItemize}

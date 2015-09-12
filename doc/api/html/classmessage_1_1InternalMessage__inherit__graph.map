@@ -1,0 +1,4 @@
+<map id="message.InternalMessage" name="message.InternalMessage">
+<area shape="rect" id="node2" href="$classidentity_1_1Unique.html" title="{identity.Unique\n||+ __init__()\l}" alt="" coords="38,285,147,363"/>
+<area shape="rect" id="node3" href="$classidentity_1_1Identified.html" title="{identity.Identified\n|&#45; __identity\l|+ __init__()\l+ __hash__()\l+ __eq__()\l}" alt="" coords="32,131,153,237"/>
+</map>

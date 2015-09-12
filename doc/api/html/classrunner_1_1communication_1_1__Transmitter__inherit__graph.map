@@ -1,0 +1,6 @@
+<map id="runner.communication._Transmitter" name="runner.communication._Transmitter">
+<area shape="rect" id="node5" href="$classrunner_1_1communication_1_1Publisher.html" title="{runner.communication.Publisher\n||+ produce()\l}" alt="" coords="5,587,213,665"/>
+<area shape="rect" id="node6" href="$classrunner_1_1communication_1_1Subscriber.html" title="{runner.communication.Subscriber\n||+ listen()\l+ is_interested()\l}" alt="" coords="237,580,453,672"/>
+<area shape="rect" id="node2" href="$classrunner_1_1identity_1_1Unique.html" title="{runner.identity.Unique\n||+ __init__()\l}" alt="" coords="152,285,301,363"/>
+<area shape="rect" id="node3" href="$classrunner_1_1identity_1_1Identified.html" title="{runner.identity.Identified\n|&#45; __identity\l|+ __init__()\l+ __hash__()\l+ __eq__()\l}" alt="" coords="146,131,307,237"/>
+</map>

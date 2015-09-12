@@ -1,0 +1,70 @@
+\hypertarget{classmorunner_1_1identity_1_1Unique}{}\section{morunner.\+identity.\+Unique Class Reference}
+\label{classmorunner_1_1identity_1_1Unique}\index{morunner.\+identity.\+Unique@{morunner.\+identity.\+Unique}}
+
+
+Inheritance diagram for morunner.\+identity.\+Unique\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmorunner_1_1identity_1_1Unique__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for morunner.\+identity.\+Unique\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{classmorunner_1_1identity_1_1Unique__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classmorunner_1_1identity_1_1Unique_af40fb103e03b1f5ae87e3050ff1a903b}{\+\_\+\+\_\+init\+\_\+\+\_\+} (self)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}Assigns a (globally) unique id tag to every instance in __init__.
+\end{DoxyVerb}
+ 
+
+Definition at line 58 of file identity.\+py.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classmorunner_1_1identity_1_1Unique_af40fb103e03b1f5ae87e3050ff1a903b}{}\index{morunner\+::identity\+::\+Unique@{morunner\+::identity\+::\+Unique}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!morunner\+::identity\+::\+Unique@{morunner\+::identity\+::\+Unique}}
+\subsubsection[{\+\_\+\+\_\+init\+\_\+\+\_\+(self)}]{\setlength{\rightskip}{0pt plus 5cm}def morunner.\+identity.\+Unique.\+\_\+\+\_\+init\+\_\+\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{None}
+\end{DoxyParamCaption}
+)}\label{classmorunner_1_1identity_1_1Unique_af40fb103e03b1f5ae87e3050ff1a903b}
+\begin{DoxyVerb}Passes a function (currently uuid.uuid4) to the Identified.__init__
+call.  This has the effect of giving every instance of unique a
+different hash value.
+\end{DoxyVerb}
+ 
+
+Definition at line 63 of file identity.\+py.
+
+
+\begin{DoxyCode}
+63     \textcolor{keyword}{def }\hyperlink{classmorunner_1_1identity_1_1Unique_af40fb103e03b1f5ae87e3050ff1a903b}{\_\_init\_\_}(self) -> None:
+64         \textcolor{stringliteral}{"""}
+65 \textcolor{stringliteral}{        Passes a function (currently uuid.uuid4) to the Identified.\_\_init\_\_}
+66 \textcolor{stringliteral}{        call.  This has the effect of giving every instance of unique a}
+67 \textcolor{stringliteral}{        different hash value.}
+68 \textcolor{stringliteral}{        """}
+69         super(Unique, self).\hyperlink{classmorunner_1_1identity_1_1Unique_af40fb103e03b1f5ae87e3050ff1a903b}{\_\_init\_\_}(uuid.uuid4)
+70 \end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/morunner/\hyperlink{identity_8py}{identity.\+py}\end{DoxyCompactItemize}

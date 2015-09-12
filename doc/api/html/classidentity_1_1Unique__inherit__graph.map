@@ -1,0 +1,8 @@
+<map id="identity.Unique" name="identity.Unique">
+<area shape="rect" id="node4" href="$classcommunication_1_1__Transmitter.html" title="{communication._Transmitter\n|&#45; _connection\l|+ __init__()\l+ connect()\l+ connection()\l}" alt="" coords="93,462,280,569"/>
+<area shape="rect" id="node7" href="$classcommunication_1_1Broadcaster.html" title="{communication.Broadcaster\n|&#45; _publishers\l&#45; _subscribers\l&#45; _holding\l&#45; _listener\l&#45; _announcer\l|+ __init__()\l+ add_publisher()\l+ add_subscriber()\l+ collect()\l+ broadcast()\l+ run()\l}" alt="" coords="304,411,488,620"/>
+<area shape="rect" id="node8" href="$classcommunication_1_1Message.html" title="{communication.Message\n|&#45; _description\l&#45; _data\l|+ __init__()\l}" alt="" coords="513,469,679,561"/>
+<area shape="rect" id="node2" href="$classidentity_1_1Identified.html" title="{identity.Identified\n|&#45; __identity\l|+ __init__()\l+ __hash__()\l+ __eq__()\l}" alt="" coords="335,131,457,237"/>
+<area shape="rect" id="node5" href="$classcommunication_1_1Publisher.html" title="{communication.Publisher\n||+ produce()\l}" alt="" coords="5,675,173,753"/>
+<area shape="rect" id="node6" href="$classcommunication_1_1Subscriber.html" title="{communication.Subscriber\n||+ listen()\l+ is_interested()\l}" alt="" coords="197,668,373,760"/>
+</map>

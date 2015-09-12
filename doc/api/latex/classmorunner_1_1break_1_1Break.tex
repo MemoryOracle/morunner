@@ -1,0 +1,170 @@
+\hypertarget{classmorunner_1_1break_1_1Break}{}\section{morunner.\+break.\+Break Class Reference}
+\label{classmorunner_1_1break_1_1Break}\index{morunner.\+break.\+Break@{morunner.\+break.\+Break}}
+
+
+Inheritance diagram for morunner.\+break.\+Break\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=193pt]{classmorunner_1_1break_1_1Break__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for morunner.\+break.\+Break\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=193pt]{classmorunner_1_1break_1_1Break__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classmorunner_1_1break_1_1Break_ad40ba1a8f3e8eb89cf2b49272637af15}{\+\_\+\+\_\+init\+\_\+\+\_\+}
+\item 
+def \hyperlink{classmorunner_1_1break_1_1Break_aa753a1991e864f09e5c88fa091045a54}{add\+\_\+task} (self, task)
+\item 
+def \hyperlink{classmorunner_1_1break_1_1Break_a751c8b40ea48a5119871d370e8ed3105}{add\+\_\+tasks} (self, \hyperlink{classmorunner_1_1break_1_1Break_a7d62d6a7a0f7f526ca0a15363eda01d6}{tasks})
+\item 
+def \hyperlink{classmorunner_1_1break_1_1Break_ae53ddba489aac5ad45172f9c4ad6f634}{stop} (self)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classmorunner_1_1break_1_1Break_a4f411d3199721dd388f4511d4075a0cc}{silent}
+\item 
+\hyperlink{classmorunner_1_1break_1_1Break_a0ca27884fb0c27084b04fb7ab17a7476}{enabled}
+\item 
+\hyperlink{classmorunner_1_1break_1_1Break_a7d62d6a7a0f7f526ca0a15363eda01d6}{tasks}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 31 of file break.\+py.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classmorunner_1_1break_1_1Break_ad40ba1a8f3e8eb89cf2b49272637af15}{}\index{morunner\+::break\+::\+Break@{morunner\+::break\+::\+Break}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!morunner\+::break\+::\+Break@{morunner\+::break\+::\+Break}}
+\subsubsection[{\+\_\+\+\_\+init\+\_\+\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}def morunner.\+break.\+Break.\+\_\+\+\_\+init\+\_\+\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{condition}
+\end{DoxyParamCaption}
+)}\label{classmorunner_1_1break_1_1Break_ad40ba1a8f3e8eb89cf2b49272637af15}
+
+
+Definition at line 33 of file break.\+py.
+
+
+\begin{DoxyCode}
+33     \textcolor{keyword}{def }\hyperlink{classmorunner_1_1break_1_1Break_ad40ba1a8f3e8eb89cf2b49272637af15}{\_\_init\_\_}(self, condition: BreakCondition) -> \textcolor{keywordtype}{None}:
+34         super(Break, self).\hyperlink{classmorunner_1_1break_1_1Break_ad40ba1a8f3e8eb89cf2b49272637af15}{\_\_init\_\_}(*condition)
+35         self.\hyperlink{classmorunner_1_1break_1_1Break_a4f411d3199721dd388f4511d4075a0cc}{silent} = \textcolor{keyword}{True}
+36         self.\hyperlink{classmorunner_1_1break_1_1Break_a0ca27884fb0c27084b04fb7ab17a7476}{enabled} = \textcolor{keyword}{True}
+37         self.\hyperlink{classmorunner_1_1break_1_1Break_a7d62d6a7a0f7f526ca0a15363eda01d6}{tasks} = set()
+38 
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classmorunner_1_1break_1_1Break_aa753a1991e864f09e5c88fa091045a54}{}\index{morunner\+::break\+::\+Break@{morunner\+::break\+::\+Break}!add\+\_\+task@{add\+\_\+task}}
+\index{add\+\_\+task@{add\+\_\+task}!morunner\+::break\+::\+Break@{morunner\+::break\+::\+Break}}
+\subsubsection[{add\+\_\+task(self, task)}]{\setlength{\rightskip}{0pt plus 5cm}def morunner.\+break.\+Break.\+add\+\_\+task (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{task, }
+\item[{}]{None}
+\end{DoxyParamCaption}
+)}\label{classmorunner_1_1break_1_1Break_aa753a1991e864f09e5c88fa091045a54}
+
+
+Definition at line 39 of file break.\+py.
+
+
+\begin{DoxyCode}
+39     \textcolor{keyword}{def }\hyperlink{classmorunner_1_1break_1_1Break_aa753a1991e864f09e5c88fa091045a54}{add\_task}(self, task) -> None:
+40         self.tasks.add(task)
+41 
+\end{DoxyCode}
+\hypertarget{classmorunner_1_1break_1_1Break_a751c8b40ea48a5119871d370e8ed3105}{}\index{morunner\+::break\+::\+Break@{morunner\+::break\+::\+Break}!add\+\_\+tasks@{add\+\_\+tasks}}
+\index{add\+\_\+tasks@{add\+\_\+tasks}!morunner\+::break\+::\+Break@{morunner\+::break\+::\+Break}}
+\subsubsection[{add\+\_\+tasks(self, tasks)}]{\setlength{\rightskip}{0pt plus 5cm}def morunner.\+break.\+Break.\+add\+\_\+tasks (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{tasks}
+\end{DoxyParamCaption}
+)}\label{classmorunner_1_1break_1_1Break_a751c8b40ea48a5119871d370e8ed3105}
+
+
+Definition at line 42 of file break.\+py.
+
+
+\begin{DoxyCode}
+42     \textcolor{keyword}{def }\hyperlink{classmorunner_1_1break_1_1Break_a751c8b40ea48a5119871d370e8ed3105}{add\_tasks}(self, tasks):
+43         self.tasks.update(tasks)
+44 
+\end{DoxyCode}
+\hypertarget{classmorunner_1_1break_1_1Break_ae53ddba489aac5ad45172f9c4ad6f634}{}\index{morunner\+::break\+::\+Break@{morunner\+::break\+::\+Break}!stop@{stop}}
+\index{stop@{stop}!morunner\+::break\+::\+Break@{morunner\+::break\+::\+Break}}
+\subsubsection[{stop(self)}]{\setlength{\rightskip}{0pt plus 5cm}def morunner.\+break.\+Break.\+stop (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classmorunner_1_1break_1_1Break_ae53ddba489aac5ad45172f9c4ad6f634}
+
+
+Definition at line 45 of file break.\+py.
+
+
+
+References morunner.\+break.\+Break.\+tasks.
+
+
+\begin{DoxyCode}
+45     \textcolor{keyword}{def }\hyperlink{classmorunner_1_1break_1_1Break_ae53ddba489aac5ad45172f9c4ad6f634}{stop}(self):
+46         frame = gdb.newest\_frame()
+47         \textcolor{keywordflow}{for} task \textcolor{keywordflow}{in} self.\hyperlink{classmorunner_1_1break_1_1Break_a7d62d6a7a0f7f526ca0a15363eda01d6}{tasks}:
+48             task.run(frame)
+49         \textcolor{keywordflow}{return} \textcolor{keyword}{False}
+50 
+51 \end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classmorunner_1_1break_1_1Break_a0ca27884fb0c27084b04fb7ab17a7476}{}\index{morunner\+::break\+::\+Break@{morunner\+::break\+::\+Break}!enabled@{enabled}}
+\index{enabled@{enabled}!morunner\+::break\+::\+Break@{morunner\+::break\+::\+Break}}
+\subsubsection[{enabled}]{\setlength{\rightskip}{0pt plus 5cm}morunner.\+break.\+Break.\+enabled}\label{classmorunner_1_1break_1_1Break_a0ca27884fb0c27084b04fb7ab17a7476}
+
+
+Definition at line 36 of file break.\+py.
+
+\hypertarget{classmorunner_1_1break_1_1Break_a4f411d3199721dd388f4511d4075a0cc}{}\index{morunner\+::break\+::\+Break@{morunner\+::break\+::\+Break}!silent@{silent}}
+\index{silent@{silent}!morunner\+::break\+::\+Break@{morunner\+::break\+::\+Break}}
+\subsubsection[{silent}]{\setlength{\rightskip}{0pt plus 5cm}morunner.\+break.\+Break.\+silent}\label{classmorunner_1_1break_1_1Break_a4f411d3199721dd388f4511d4075a0cc}
+
+
+Definition at line 35 of file break.\+py.
+
+\hypertarget{classmorunner_1_1break_1_1Break_a7d62d6a7a0f7f526ca0a15363eda01d6}{}\index{morunner\+::break\+::\+Break@{morunner\+::break\+::\+Break}!tasks@{tasks}}
+\index{tasks@{tasks}!morunner\+::break\+::\+Break@{morunner\+::break\+::\+Break}}
+\subsubsection[{tasks}]{\setlength{\rightskip}{0pt plus 5cm}morunner.\+break.\+Break.\+tasks}\label{classmorunner_1_1break_1_1Break_a7d62d6a7a0f7f526ca0a15363eda01d6}
+
+
+Definition at line 37 of file break.\+py.
+
+
+
+Referenced by morunner.\+break.\+Break.\+stop().
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/morunner/\hyperlink{break_8py}{break.\+py}\end{DoxyCompactItemize}

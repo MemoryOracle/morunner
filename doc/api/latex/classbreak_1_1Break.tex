@@ -1,0 +1,168 @@
+\hypertarget{classbreak_1_1Break}{}\section{break.\+Break Class Reference}
+\label{classbreak_1_1Break}\index{break.\+Break@{break.\+Break}}
+
+
+Inheritance diagram for break.\+Break\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=165pt]{classbreak_1_1Break__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for break.\+Break\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=165pt]{classbreak_1_1Break__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classbreak_1_1Break_a21eaaccf2079ffd3b2f4ae607ef4ebb3}{\+\_\+\+\_\+init\+\_\+\+\_\+}
+\item 
+def \hyperlink{classbreak_1_1Break_a6df74bf440c33da97a47bc457f5fb365}{add\+\_\+task} (self, task)
+\item 
+def \hyperlink{classbreak_1_1Break_a1befe5e59cb28f095fee3b65334868ae}{add\+\_\+tasks} (self, \hyperlink{classbreak_1_1Break_a9be1a4dbde4424b780ffbd7f38575ec8}{tasks})
+\item 
+def \hyperlink{classbreak_1_1Break_a5475d4354bd34206c6a595f20aa4531a}{stop} (self)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classbreak_1_1Break_a4201e7e9673c801409adb8b7ea585609}{silent}
+\item 
+\hyperlink{classbreak_1_1Break_ac97420d9bcf00dc8ca06f538b79119a6}{enabled}
+\item 
+\hyperlink{classbreak_1_1Break_a9be1a4dbde4424b780ffbd7f38575ec8}{tasks}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 31 of file break.\+py.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classbreak_1_1Break_a21eaaccf2079ffd3b2f4ae607ef4ebb3}{}\index{break\+::\+Break@{break\+::\+Break}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!break\+::\+Break@{break\+::\+Break}}
+\subsubsection[{\+\_\+\+\_\+init\+\_\+\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}def break.\+Break.\+\_\+\+\_\+init\+\_\+\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{condition}
+\end{DoxyParamCaption}
+)}\label{classbreak_1_1Break_a21eaaccf2079ffd3b2f4ae607ef4ebb3}
+
+
+Definition at line 33 of file break.\+py.
+
+
+\begin{DoxyCode}
+33     \textcolor{keyword}{def }\hyperlink{classbreak_1_1Break_a21eaaccf2079ffd3b2f4ae607ef4ebb3}{\_\_init\_\_}(self, condition: BreakCondition) -> \textcolor{keywordtype}{None}:
+34         super(Break, self).\hyperlink{classbreak_1_1Break_a21eaaccf2079ffd3b2f4ae607ef4ebb3}{\_\_init\_\_}(*condition)
+35         self.\hyperlink{classbreak_1_1Break_a4201e7e9673c801409adb8b7ea585609}{silent} = \textcolor{keyword}{True}
+36         self.\hyperlink{classbreak_1_1Break_ac97420d9bcf00dc8ca06f538b79119a6}{enabled} = \textcolor{keyword}{True}
+37         self.\hyperlink{classbreak_1_1Break_a9be1a4dbde4424b780ffbd7f38575ec8}{tasks} = set()
+38 
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classbreak_1_1Break_a6df74bf440c33da97a47bc457f5fb365}{}\index{break\+::\+Break@{break\+::\+Break}!add\+\_\+task@{add\+\_\+task}}
+\index{add\+\_\+task@{add\+\_\+task}!break\+::\+Break@{break\+::\+Break}}
+\subsubsection[{add\+\_\+task(self, task)}]{\setlength{\rightskip}{0pt plus 5cm}def break.\+Break.\+add\+\_\+task (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{task, }
+\item[{}]{None}
+\end{DoxyParamCaption}
+)}\label{classbreak_1_1Break_a6df74bf440c33da97a47bc457f5fb365}
+
+
+Definition at line 39 of file break.\+py.
+
+
+\begin{DoxyCode}
+39     \textcolor{keyword}{def }\hyperlink{classbreak_1_1Break_a6df74bf440c33da97a47bc457f5fb365}{add\_task}(self, task) -> None:
+40         self.tasks.add(task)
+41 
+\end{DoxyCode}
+\hypertarget{classbreak_1_1Break_a1befe5e59cb28f095fee3b65334868ae}{}\index{break\+::\+Break@{break\+::\+Break}!add\+\_\+tasks@{add\+\_\+tasks}}
+\index{add\+\_\+tasks@{add\+\_\+tasks}!break\+::\+Break@{break\+::\+Break}}
+\subsubsection[{add\+\_\+tasks(self, tasks)}]{\setlength{\rightskip}{0pt plus 5cm}def break.\+Break.\+add\+\_\+tasks (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{tasks}
+\end{DoxyParamCaption}
+)}\label{classbreak_1_1Break_a1befe5e59cb28f095fee3b65334868ae}
+
+
+Definition at line 42 of file break.\+py.
+
+
+\begin{DoxyCode}
+42     \textcolor{keyword}{def }\hyperlink{classbreak_1_1Break_a1befe5e59cb28f095fee3b65334868ae}{add\_tasks}(self, tasks):
+43         self.tasks.update(tasks)
+44 
+\end{DoxyCode}
+\hypertarget{classbreak_1_1Break_a5475d4354bd34206c6a595f20aa4531a}{}\index{break\+::\+Break@{break\+::\+Break}!stop@{stop}}
+\index{stop@{stop}!break\+::\+Break@{break\+::\+Break}}
+\subsubsection[{stop(self)}]{\setlength{\rightskip}{0pt plus 5cm}def break.\+Break.\+stop (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{classbreak_1_1Break_a5475d4354bd34206c6a595f20aa4531a}
+
+
+Definition at line 45 of file break.\+py.
+
+
+
+References break.\+Break.\+tasks.
+
+
+\begin{DoxyCode}
+45     \textcolor{keyword}{def }\hyperlink{classbreak_1_1Break_a5475d4354bd34206c6a595f20aa4531a}{stop}(self):
+46         frame = gdb.newest\_frame()
+47         \textcolor{keywordflow}{for} task \textcolor{keywordflow}{in} self.\hyperlink{classbreak_1_1Break_a9be1a4dbde4424b780ffbd7f38575ec8}{tasks}:
+48             task.run(frame)
+49         \textcolor{keywordflow}{return} \textcolor{keyword}{False}
+50 
+51 \end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classbreak_1_1Break_ac97420d9bcf00dc8ca06f538b79119a6}{}\index{break\+::\+Break@{break\+::\+Break}!enabled@{enabled}}
+\index{enabled@{enabled}!break\+::\+Break@{break\+::\+Break}}
+\subsubsection[{enabled}]{\setlength{\rightskip}{0pt plus 5cm}break.\+Break.\+enabled}\label{classbreak_1_1Break_ac97420d9bcf00dc8ca06f538b79119a6}
+
+
+Definition at line 36 of file break.\+py.
+
+\hypertarget{classbreak_1_1Break_a4201e7e9673c801409adb8b7ea585609}{}\index{break\+::\+Break@{break\+::\+Break}!silent@{silent}}
+\index{silent@{silent}!break\+::\+Break@{break\+::\+Break}}
+\subsubsection[{silent}]{\setlength{\rightskip}{0pt plus 5cm}break.\+Break.\+silent}\label{classbreak_1_1Break_a4201e7e9673c801409adb8b7ea585609}
+
+
+Definition at line 35 of file break.\+py.
+
+\hypertarget{classbreak_1_1Break_a9be1a4dbde4424b780ffbd7f38575ec8}{}\index{break\+::\+Break@{break\+::\+Break}!tasks@{tasks}}
+\index{tasks@{tasks}!break\+::\+Break@{break\+::\+Break}}
+\subsubsection[{tasks}]{\setlength{\rightskip}{0pt plus 5cm}break.\+Break.\+tasks}\label{classbreak_1_1Break_a9be1a4dbde4424b780ffbd7f38575ec8}
+
+
+Definition at line 37 of file break.\+py.
+
+
+
+Referenced by break.\+Break.\+stop().
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/runner/\hyperlink{break_8py}{break.\+py}\end{DoxyCompactItemize}
