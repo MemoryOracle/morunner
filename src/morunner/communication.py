@@ -37,7 +37,7 @@ TODO: Say about this later.
 # Standard Library Imports
 #-------------------------
 import multiprocessing
-import multiprocessing.connection
+import multiprocessing.connection as connection
 import queue
 import threading
 import typing # needed for type checking
@@ -60,8 +60,7 @@ class _Transmitter(identity.Unique):
         self._connection = None
 
     def connect(self,
-                connection: multiprocessing.connection.Connection
-               ) -> None:
+                connection: connection.Connection) -> None:
         self._connection = connection
 
     @property
@@ -86,7 +85,7 @@ class Subscriber(_Transmitter):
         Listen for messages from the broadcaster.
         """
         while self.connection:
-            for ready_connection in multiprocessing.connection.wait([self.connection]):
+            for ready_connection in connection.wait([self.connection]):
                 message = ready_connection.recv()
                 # TODO: Deal with message
                 # print("got a ", x)
@@ -104,20 +103,24 @@ class Broadcaster(identity.Unique):
 
     def __init__(self) -> None:
         super().__init__()
-        self._publishers = dict() # type: Dict[Publisher, multiprocessing.connection.Connection]
-        self._subscribers = dict() # type: Dict[Subscriber, multiprocessing.connection.Connection]
+        # type: typing.Dict[Publisher, connection.Connection]
+        self._publishers = dict()
+        # type: typing.Dict[Subscriber, connection.Connection]
+        self._subscribers = dict()
         # queue of messages which have been accepted but not yet transmitted
         self._holding = queue.Queue()
 
         # self._listener is responsible for collecting (and placing in
         # self._holding) all the publisher messages
-        self._listener = threading.Thread(target=Broadcaster.collect, args=(self,))
+        self._listener = threading.Thread(target=Broadcaster.collect,
+                                          args=(self,))
 
         # self._announcer is responsible for distributing all messasges from
         # self._holding to the *interested* subscribers
-        self._announcer = threading.Thread(target=Broadcaster.broadcast, args=(self,))
+        self._announcer = threading.Thread(target=Broadcaster.broadcast,
+                                           args=(self,))
 
-    def add_publisher(self, publisher: Publisher) -> multiprocessing.connection.Connection:
+    def add_publisher(self, publisher: Publisher) -> connection.Connection:
         """
         Add a Publisher to send messages to this Broadcaster.
         """
@@ -127,7 +130,7 @@ class Broadcaster(identity.Unique):
         self._publishers[publisher] = recv
         return send
 
-    def add_subscriber(self, subscriber: Subscriber) -> multiprocessing.connection.Connection:
+    def add_subscriber(self, subscriber: Subscriber) -> connection.Connection:
         """
         Add a Subscriber to recieve messages from this Broadcaster.
         """
@@ -140,7 +143,7 @@ class Broadcaster(identity.Unique):
     def collect(self):
         while True:
             inbound = list(self._publishers.values())
-            for p in multiprocessing.connection.wait(inbound):
+            for p in connection.wait(inbound):
                 try:
                     msg = p.recv_bytes()
                     self._holding.put(msg)
