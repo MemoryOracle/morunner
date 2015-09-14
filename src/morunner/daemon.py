@@ -21,8 +21,10 @@ import subordinate
 
 
 def ssl_context_factory() -> ssl.SSLContext:
-    return ssl.create_default_context(purpose=ssl.Purpose.SERVER_AUTH,
-                                      cafile="/home/dnoland/github/MemoryOracle/morunner/src/morunner/security/encryption/certificates/ca.crt")
+    context = ssl.SSLContext(ssl.PROTOCOL_TLSv1_2)
+    context.load_cert_chain(certfile="/home/dnoland/github/MemoryOracle/morunner/src/morunner/security/encryption/certificates/morunner.crt",
+                            keyfile="/home/dnoland/github/MemoryOracle/morunner/src/morunner/security/encryption/certificates/morunner.key")
+    return context
 
 
 class LauncherDaemon(object):
@@ -57,7 +59,7 @@ class LauncherDaemon(object):
 
 
 def main() -> None:
-    launcher_daemon = LauncherDaemon("localhost", 8765)
+    launcher_daemon = LauncherDaemon("navi.dnoland.com", 8765)
     launcher_daemon.run()
 
 

@@ -20,11 +20,12 @@ import authentication
 import subordinate
 
 def ssl_context_factory() -> ssl.SSLContext:
-    return ssl.create_default_context(purpose=ssl.Purpose.CLIENT_AUTH,
+    return ssl.create_default_context(purpose=ssl.Purpose.SERVER_AUTH,
                                       cafile="/home/dnoland/github/MemoryOracle/morunner/src/morunner/security/encryption/certificates/ca.crt")
 
 async def hello() -> None:
-    websocket = await websockets.connect('wss://localhost:8765', ssl=ssl_context_factory())
+    websocket = await websockets.connect('wss://navi.dnoland.com:8765',
+                                         ssl=ssl_context_factory())
     name = input("What's your name? ")
     await websocket.send(name)
     print("> {}".format(name))

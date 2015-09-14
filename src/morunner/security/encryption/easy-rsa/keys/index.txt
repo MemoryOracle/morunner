@@ -1,1 +1,2 @@
-V	151213202554Z		01	unknown	/C=US/ST=CO/L=Brighton/O=memoryoracle/OU=memoryoracle/CN=navi.dnoland.com/name=morunner/emailAddress=daniel.noland@gmail.com
+R	151213202554Z	150914204653Z	01	unknown	/C=US/ST=CO/L=Brighton/O=memoryoracle/OU=memoryoracle/CN=navi.dnoland.com/name=morunner/emailAddress=daniel.noland@gmail.com
+V	151213204833Z		02	unknown	/C=US/ST=CO/L=Brighton/O=memoryoracle/OU=memoryoracle/CN=navi.dnoland.com/name=navi.dnoland.com/emailAddress=daniel.noland@gmail.com
