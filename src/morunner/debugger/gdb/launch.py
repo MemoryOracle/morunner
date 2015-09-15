@@ -8,6 +8,7 @@ import typing  # needed for type checking
 import uuid
 import os
 import stat
+import configparser
 
 # ------------------------
 # External Library Imports
@@ -29,21 +30,18 @@ def _generate_connection_id() -> str:
     return str(uuid.uuid4())
 
 
-_GDB_INIT_PATH = "/tmp/memoryoracle/gdb/"
-_GDB_INIT_FILE_NAME = "init"
 
-
-def create_gdb_init() -> None:
+def create_gdb_init(gdb_conf: configparser.SectionProxy) -> None:
     """
     Temp function.  Just a quick hack to build the file containing initial
     commands for GDBProcesses.
     """
     # deny all access to outside users
-    os.makedirs(_GDB_INIT_PATH, mode=0o700, exist_ok=True)
-    os.chmod(_GDB_INIT_PATH,
+    os.makedirs(gdb_conf["config-path"], mode=0o700, exist_ok=True)
+    os.chmod(gdb_conf["config-path"],
              mode=stat.S_IRWXU,
              follow_symlinks=False)
-    target = _GDB_INIT_PATH + _GDB_INIT_FILE_NAME
+    target = gdb_conf["init-path"]
     with authentication.secure_open(target, "w") as init:
         os.truncate(target, 0)  # wipe the init file
         init.write("python import morunner.debugger.gdb.connect")

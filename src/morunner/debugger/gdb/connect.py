@@ -16,14 +16,14 @@ import time
 # -------------
 # Local Imports
 # -------------
-import morunner.authentication as authentication
+import morunner.security as security
 
 _address = "/tmp/memoryoracle/session-server.sock"
 _key_file = "/tmp/memoryoracle/session-auth.key"
 
 
-def attach(cmd_line: typing.Iterator[str]) -> None:
-    authkey = authentication.read_key(_key_file)
+def attach(config) -> None:
+    authkey = security.read_key(_key_file)
     with connection.Client(_address,
                            family="AF_UNIX",
                            authkey=authkey) as server:

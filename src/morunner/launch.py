@@ -10,13 +10,9 @@ you might guess).
 # ------------------------
 # Standard Library Imports
 # ------------------------
-import copy
 import multiprocessing.connection as connection
-import os
-import subprocess
-import tempfile
 import typing  # needed for type checking
-import shlex
+import uuid
 
 # ------------------------
 # External Library Imports
@@ -26,21 +22,19 @@ import shlex
 # -------------
 # Local Imports
 # -------------
-import authentication
-import subordinate
-
+import security.authentication
 
 
 class Session(object):
 
-    def __init__(self, cmd_line: typing.Iterator[str]) -> None:
-        self._cmd_line = cmd_line
-        self._debugger = GNUDebugger()
-        self._debuggee = GNUDebuggee(cmd_line)
+    def __init__(self) -> None:
+        self._session_id = uuid.uuid4()
+        self._debugger = None  # type: typing.Optional[Debugger]
+        self._debuggee = None  # type: typing.Optional[Debuggee]
 
     def launch(self) -> None:
-        self._debugger.launch()
         self._debuggee.launch()
+        self._debugger.launch()
 
     def wait(self) -> None:
         self._debugger.wait()
