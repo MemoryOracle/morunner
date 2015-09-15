@@ -47,7 +47,7 @@ async def hello(conf: configparser.ConfigParser) -> None:
     hostname = conf["System"]["hostname"]
     port = conf["System"]["port"]
     websocket = await websockets.connect("wss://" + hostname + ":" + port,
-                                         ssl=ssl_context_factory(conf["Tls"]))
+                                         ssl=ssl_context_factory(conf["Security"]))
     name = input("What's your name? ")
     await websocket.send(name)
     print("> {}".format(name))
@@ -57,8 +57,14 @@ async def hello(conf: configparser.ConfigParser) -> None:
 
 
 def main() -> None:
-    conf = config.parse("/home/dnoland/github/MemoryOracle/morunner/conf/client.ini")
-    asyncio.get_event_loop().run_until_complete(hello(conf))
+    conf = config.Configuration()
+    conf.merge("/home/dnoland/github/MemoryOracle/morunner/conf/security/localhost.ini")
+    import pprint
+    pp = pprint.PrettyPrinter()
+    pp.pprint(conf.read.__dict__)
+    pp.pprint(conf.read["System"]["hostname"])
+    pp.pprint(conf.read["Security"]["key-path"])
+    asyncio.get_event_loop().run_until_complete(hello(conf.read))
 
 
 if __name__ == "__main__":
