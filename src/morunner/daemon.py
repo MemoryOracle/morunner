@@ -9,6 +9,8 @@ import typing  # needed for type checking
 import asyncio
 import configparser
 import json
+import socket
+import pprint
 
 # ------------------------
 # External Library Imports
@@ -18,6 +20,8 @@ import tornado.web
 import tornado.websocket
 import tornado.ioloop
 import tornado.httpserver
+import tornado.netutil
+import tornado.process
 
 # -------------
 # Local Imports
@@ -25,34 +29,7 @@ import tornado.httpserver
 import authentication
 import subordinate
 import config
-
-
-def ssl_context_factory(tls_config: configparser.SectionProxy
-                        ) -> ssl.SSLContext:
-    context = ssl.SSLContext(ssl.PROTOCOL_TLSv1_2)
-    # context.verify_mode = ssl.CERT_REQUIRED
-    # context.options = (ssl.OP_CIPHER_SERVER_PREFERENCE |
-                       # ssl.OP_SINGLE_ECDH_USE)
-    # context.verify_flags = (ssl.VERIFY_CRL_CHECK_CHAIN |
-                            # ssl.VERIFY_X509_STRICT)
-    # context.verify_mode = ssl.CERT_REQUIRED
-
-    # TODO: more testing is needed here.  I don't understand if / how the
-    # websockets lib is checking the hostname.  This is *required* for a secure
-    # connection according to the python ssl documentation.  That said, I am
-    # not sure I fully understand why, as we should be verifying the
-    # client/server by certificate signature.
-
-    # context.server_hostname = tls_config["hostname"]
-    # context.check_hostname = True
-    context.load_verify_locations(cafile=tls_config["ca-crt-path"])
-    context.load_verify_locations(cafile=tls_config["crl-path"])
-    context.set_ciphers(tls_config["cipher-list"])
-    context.set_ecdh_curve(tls_config["ecdh-curve"])
-    context.load_cert_chain(certfile=tls_config["crt-path"],
-                            keyfile=tls_config["key-path"],
-                            password=tls_config["key-password"])
-    return context
+import security
 
 
 class IndexHandler(tornado.web.RequestHandler):
@@ -91,7 +68,6 @@ class ApiHandler(tornado.web.RequestHandler):
         pass
 
 CONF = config.Configuration()
-SERVER_SETTINGS = {"ssl_options": ssl_context_factory(CONF.read["Security"])}
 HANDLERS = [(r'/', IndexHandler),
             (r'/ws', SocketHandler),
             (r'/api', ApiHandler),
@@ -104,50 +80,23 @@ HANDLERS = [(r'/', IndexHandler),
 app = tornado.web.Application(HANDLERS)
 
 
-# class LauncherDaemon(object):
-#     """
-#     Daemon which listens for requests to launch memory-oracle instances.
-#     """
-#
-#     def __init__(self, config: configparser.ConfigParser) -> None:
-#         self._config = config
-#         self.address = config["System"]["hostname"]
-#         self.port = config["System"].getint("port")
-#         # TODO: deduce type of self._server
-#         self._server = None
-#
-#     def run(self) -> None:
-#         tls_context = ssl_context_factory(self._config["Security"])
-#         self._server = websockets.serve(handle,
-#                                         host=self.address,
-#                                         port=self.port,
-#                                         ssl=tls_context)
-#         print(type(self._server))
-#         asyncio.get_event_loop().run_until_complete(self._server)
-#         asyncio.get_event_loop().run_forever()
-#
-#
-# async def handle(websocket: websockets.server.WebSocketServerProtocol,
-#                  path: str) -> None:
-#     while True:
-#         try:
-#             name = await websocket.recv()
-#             print("< {}".format(name))
-#             greeting = "Hello {}!".format(name)
-#             await websocket.send(greeting)
-#             print("> {}".format(greeting))
-#         except:
-#             break
-
-
 def main() -> None:
-    conf = config.Configuration()
-    launcher_daemon = LauncherDaemon(conf.read)
-    launcher_daemon.run()
-
-
-if __name__ == "__main__":
-    httpd = tornado.httpserver.HTTPServer(app, **SERVER_SETTINGS)
-    httpd.listen(18942)
+    port = CONF.read['System'].getint('port')
+    address = CONF.read['System']['address']
+    hostname = CONF.read['System']['hostname']
+    sockets = tornado.netutil.bind_sockets(port=port,
+                                           address=address,
+                                           family=socket.AF_INET6)
+    context = security.ssl_context_factory(CONF.read["Security"])
+    ssockets = [context.wrap_socket(sock,
+                                    do_handshake_on_connect=False,
+                                    server_hostname=hostname)
+                for sock in sockets]
+    server_settings = {"ssl_options": context}
+    httpd = tornado.httpserver.HTTPServer(app, **server_settings)
+    httpd.add_sockets(ssockets)
     tornado.ioloop.IOLoop.current().start()
-    # main()
+
+
+if __name__ == '__main__':
+    main()

@@ -1,57 +1,57 @@
 Certificate:
     Data:
         Version: 3 (0x2)
-        Serial Number: 2 (0x2)
+        Serial Number: 1 (0x1)
     Signature Algorithm: ecdsa-with-SHA512
-        Issuer: CN=MemoryOracle Root CA
+        Issuer: CN=MemoryOracle CA
         Validity
-            Not Before: Sep 15 16:54:41 2015 GMT
-            Not After : Dec 14 16:54:41 2015 GMT
+            Not Before: Sep 21 02:14:32 2015 GMT
+            Not After : Dec 20 02:14:32 2015 GMT
         Subject: CN=navi.dnoland.com
         Subject Public Key Info:
             Public Key Algorithm: id-ecPublicKey
                 Public-Key: (384 bit)
                 pub: 
-                    04:f6:78:c0:83:68:b3:aa:34:d5:5d:dc:b7:a2:f5:
-                    eb:3f:d7:73:43:13:34:be:a2:fa:0e:99:b4:ce:50:
-                    54:0a:d7:6d:c2:34:f1:ce:ab:9c:49:e4:51:8b:ee:
-                    a0:7d:17:73:ea:9d:7a:3e:31:0c:bf:20:12:90:37:
-                    0e:c8:bb:ce:17:9c:57:d1:bf:22:11:9e:29:f2:fd:
-                    bb:85:8b:42:44:40:e7:45:90:87:e5:5b:fc:2e:11:
-                    06:bb:fc:00:90:3c:b1
+                    04:da:e1:b3:68:34:3e:f2:d6:95:2b:a5:7d:3a:01:
+                    63:87:00:8d:9e:ce:b6:13:0d:a2:cd:1b:d2:4f:83:
+                    f2:19:52:53:9b:d1:5e:6f:5b:31:70:44:1e:d5:73:
+                    af:37:ac:e5:6e:4a:31:bd:df:a3:51:7e:e1:08:95:
+                    80:ea:8b:a1:33:c8:be:3c:ea:4e:cc:b8:dc:6a:48:
+                    3a:48:50:57:8f:a8:40:67:18:f6:5e:3e:f5:59:34:
+                    84:eb:bf:9d:fc:64:90
                 ASN1 OID: secp384r1
                 NIST CURVE: P-384
         X509v3 extensions:
             X509v3 Basic Constraints: 
                 CA:FALSE
             X509v3 Subject Key Identifier: 
-                20:A6:F1:8D:49:FA:C2:03:DA:15:EC:D7:5E:B8:A6:28:D9:5E:1B:E7
+                0B:EE:A9:03:C8:AE:6B:B1:E1:3A:5E:4F:FD:E0:B7:1F:74:C6:1D:2C
             X509v3 Authority Key Identifier: 
-                keyid:5E:F3:94:72:4D:8D:85:CE:EF:20:9A:DB:94:3A:71:77:26:14:04:88
-                DirName:/CN=MemoryOracle Root CA
-                serial:A9:B0:DD:44:96:E0:1A:EC
+                keyid:C7:1E:B2:F5:9A:2D:BE:4E:36:ED:77:76:D4:FA:7E:7F:C7:88:47:80
+                DirName:/CN=MemoryOracle CA
+                serial:F7:2F:D8:AA:93:39:21:8E
 
             X509v3 Extended Key Usage: 
                 TLS Web Server Authentication
             X509v3 Key Usage: 
                 Digital Signature, Key Encipherment
     Signature Algorithm: ecdsa-with-SHA512
-         30:65:02:31:00:ab:ed:34:fe:31:52:b6:16:bb:49:3f:32:10:
-         86:16:d2:ff:30:93:21:b8:9a:ac:f3:33:6c:b4:62:0e:22:82:
-         58:e9:a6:0b:c4:fb:02:e8:e1:e8:b9:96:66:ab:48:90:07:02:
-         30:19:16:06:c2:8e:0c:df:9e:04:ac:75:9a:6c:28:ff:3b:7b:
-         d4:9e:c3:86:b2:17:e1:3f:13:cd:0f:8b:02:94:54:cb:3f:de:
-         a0:3c:f8:fa:ef:21:7a:44:04:ac:c3:0e:8d
+         30:66:02:31:00:9e:fb:11:e9:b8:00:76:8b:a7:f7:d2:47:d7:
+         d6:36:91:1c:92:5f:4f:f2:e0:99:37:a2:7e:6b:95:6e:31:82:
+         4e:02:2a:e5:a1:3b:e4:14:66:55:d3:84:e5:e7:cb:7b:f9:02:
+         31:00:ab:64:bc:e1:37:0b:60:11:e6:de:61:49:ae:04:1c:5d:
+         9b:ee:bf:de:ff:1a:67:21:2c:5d:70:a8:0b:23:71:2f:0c:ed:
+         d9:af:1f:b2:d3:e1:9a:99:2c:c3:ec:bb:e7:c5
 -----BEGIN CERTIFICATE-----
-MIICBzCCAY2gAwIBAgIBAjAKBggqhkjOPQQDBDAfMR0wGwYDVQQDDBRNZW1vcnlP
-cmFjbGUgUm9vdCBDQTAeFw0xNTA5MTUxNjU0NDFaFw0xNTEyMTQxNjU0NDFaMBsx
-GTAXBgNVBAMMEG5hdmkuZG5vbGFuZC5jb20wdjAQBgcqhkjOPQIBBgUrgQQAIgNi
-AAT2eMCDaLOqNNVd3Lei9es/13NDEzS+ovoOmbTOUFQK123CNPHOq5xJ5FGL7qB9
-F3PqnXo+MQy/IBKQNw7Iu84XnFfRvyIRniny/buFi0JEQOdFkIflW/wuEQa7/ACQ
-PLGjgaAwgZ0wCQYDVR0TBAIwADAdBgNVHQ4EFgQUIKbxjUn6wgPaFezXXrimKNle
-G+cwTwYDVR0jBEgwRoAUXvOUck2Nhc7vIJrblDpxdyYUBIihI6QhMB8xHTAbBgNV
-BAMMFE1lbW9yeU9yYWNsZSBSb290IENBggkAqbDdRJbgGuwwEwYDVR0lBAwwCgYI
-KwYBBQUHAwEwCwYDVR0PBAQDAgWgMAoGCCqGSM49BAMEA2gAMGUCMQCr7TT+MVK2
-FrtJPzIQhhbS/zCTIbiarPMzbLRiDiKCWOmmC8T7Aujh6LmWZqtIkAcCMBkWBsKO
-DN+eBKx1mmwo/zt71J7DhrIX4T8TzQ+LApRUyz/eoDz4+u8hekQErMMOjQ==
+MIIB/jCCAYOgAwIBAgIBATAKBggqhkjOPQQDBDAaMRgwFgYDVQQDDA9NZW1vcnlP
+cmFjbGUgQ0EwHhcNMTUwOTIxMDIxNDMyWhcNMTUxMjIwMDIxNDMyWjAbMRkwFwYD
+VQQDDBBuYXZpLmRub2xhbmQuY29tMHYwEAYHKoZIzj0CAQYFK4EEACIDYgAE2uGz
+aDQ+8taVK6V9OgFjhwCNns62Ew2izRvST4PyGVJTm9Feb1sxcEQe1XOvN6zlbkox
+vd+jUX7hCJWA6ouhM8i+POpOzLjcakg6SFBXj6hAZxj2Xj71WTSE67+d/GSQo4Gb
+MIGYMAkGA1UdEwQCMAAwHQYDVR0OBBYEFAvuqQPIrmux4TpeT/3gtx90xh0sMEoG
+A1UdIwRDMEGAFMcesvWaLb5ONu13dtT6fn/HiEeAoR6kHDAaMRgwFgYDVQQDDA9N
+ZW1vcnlPcmFjbGUgQ0GCCQD3L9iqkzkhjjATBgNVHSUEDDAKBggrBgEFBQcDATAL
+BgNVHQ8EBAMCBaAwCgYIKoZIzj0EAwQDaQAwZgIxAJ77Eem4AHaLp/fSR9fWNpEc
+kl9P8uCZN6J+a5VuMYJOAirloTvkFGZV04Tl58t7+QIxAKtkvOE3C2AR5t5hSa4E
+HF2b7r/e/xpnISxdcKgLI3EvDO3Zrx+y0+GamSzD7LvnxQ==
 -----END CERTIFICATE-----
